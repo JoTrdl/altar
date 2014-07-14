@@ -26,6 +26,12 @@ Folder structure
 |-- test
 ```
 
+NPM modules
+----
+* [Express 4.x.x](http://expressjs.com/)
+* [Socket.io 1.x.x](http://socket.io/)
+
+
 License
 ----
 

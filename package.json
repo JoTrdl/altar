@@ -1,0 +1,27 @@
+{
+  "name": "Nodebone",
+  "description": "A Node.js/Express template for a quick start",
+  "version": "0.1.0",
+  "author": "Johann Troendle",
+  "keywords": [
+    "nodejs",
+    "template",
+    "express",
+    "web",
+    "rest",
+    "restful",
+    "websoket"
+  ],
+  "repository": "JoTrdl/nodebone",
+  "license": "MIT",
+  "dependencies": {
+    "express": "4.x.x",
+    "socket.io": "1.x.x"
+  },
+  "devDependencies": {
+    
+  },
+  "engines": {
+    "node": ">= 0.10.0"
+  }
+}
