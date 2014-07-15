@@ -1,7 +1,7 @@
 nodebone
 ========
 
-A Node.js/Express template for a quick start. Supports standard rendering / REST API / Websocket.
+A Node.js/Express template for a quick start. Supports web rendering / REST API / Websocket.
 
 Folder structure
 ----
