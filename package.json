@@ -15,8 +15,18 @@
   "repository": "JoTrdl/nodebone",
   "license": "MIT",
   "dependencies": {
+    "sugar": "1.x.x",
     "express": "4.x.x",
-    "socket.io": "1.x.x"
+    "socket.io": "1.x.x",
+
+    "jade": "1.x.x",
+    "body-parser": "1.x.x",
+    "cookie-parser": "1.x.x",
+    "compression": "1.0.8",
+    "express-session" : "1.x.x",
+    "method-override": "2.x.x",
+    "morgan" : "1.x.x",
+    "csurf": "1.x.x"
   },
   "devDependencies": {
     

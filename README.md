@@ -8,16 +8,15 @@ Folder structure
 ```
 |-- app
 |   |-- controllers
-|       |-- renderer
+|       |-- web
 |       |-- rest
 |       |-- websocket
 |   |-- helpers
 |   |-- models
+|   |-- routes
 |   |-- views
 |-- config
-|   |-- development
-|   |-- staging
-|   |-- production
+|   |-- environments
 |-- public
 |   |-- css
 |   |-- img

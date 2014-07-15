@@ -1,0 +1,30 @@
+doctype html
+html(lang="en")
+  head
+    block meta
+      meta(http-equiv='Content-Type', content='text/html; charset=UTF-8')
+
+    block head
+      title= (typeof(title) == 'undefined' ? "App" : title)
+
+    block css
+      //link(rel="stylesheet", href="/app.css", type="text/css")
+      //link(rel="stylesheet", href="/stylesheets/styles.css", type="text/css")
+      
+    block scripts
+      
+    body
+      block header
+        //include header 
+
+      div.wrapper
+        div.viewport
+          div.content
+            block content
+              p
+                | Hello from app
+        div.push
+
+      block footer
+        //include footer 
+        input(type="hidden", name="_csrf", value="#{csrftoken}")
