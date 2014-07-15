@@ -16,7 +16,6 @@ Folder structure
 |   |-- routes
 |   |-- views
 |-- config
-|   |-- environments
 |-- public
 |   |-- css
 |   |-- img

@@ -12,7 +12,7 @@ var port = parseInt(process.env.PORT || 8080, 10);
 
 app = module.exports = express();
 
-require('./config/configure');
+require('./lib/configure');
 
 app.listen(port);
 
