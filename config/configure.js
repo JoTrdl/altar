@@ -79,3 +79,22 @@ var routesFile = walk(ROOT + '/app/routes');
 for (f in routesFile) {
   require(routesFile[f]);
 };
+
+// install error handler
+app.use(function(err, req, res, next) {
+  console.error(err.stack);
+  if (req.xhr) {
+    res.send(500, { error: 'Oops, error!' });
+  } else {
+    res.status(500);
+    res.render('error', { error: err });
+  }
+  next(err);
+});
+
+
+process.on('uncaughtException', function(err) {
+  // handle the error safely
+  console.error(err.stack);
+});
+

@@ -1,14 +1,14 @@
 
 // Global to app
 express = require('express');
-sugar = require('sugar');
+require('sugar');
 
 ROOT = __dirname;
 
 if(!process.env.NODE_ENV)
   process.env.NODE_ENV = 'development';
 
-const port = parseInt(process.env.PORT || 8080);
+var port = parseInt(process.env.PORT || 8080, 10);
 
 app = module.exports = express();
 
