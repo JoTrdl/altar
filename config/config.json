@@ -8,6 +8,6 @@
   "static": "app/public",
 
   "view engine": "jade",
-  "x-powered-by": null
-
+  "x-powered-by": null,
+  "express-session": { "secret": "secret", "key": "app.sid", "saveUninitialized": true, "resave": true }
 }

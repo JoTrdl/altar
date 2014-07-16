@@ -11,7 +11,7 @@ props.forEach(function(prop){
 });
 
 // static properties
-props = 'title,version,view engine,x-powered-by'.split(',');
+props = 'title,version,view engine,x-powered-by,express-session'.split(',');
 props.forEach(function(prop){
   app.set(prop, config[prop]);
 });
@@ -22,10 +22,8 @@ app.use( require('body-parser').json() );
 app.use( require('cookie-parser')() );
 app.use( require('method-override')() );
 app.use( require('morgan')({ format: ':method :url' }) );
-app.use( require('express-session')({ secret: 'secret', key: 'app.sid', saveUninitialized: true, resave: true }) );
+app.use( require('express-session')(app.settings['express-session']) );
 app.use( require('csurf')() );
-
-app.use( express.static(app.settings.static) );
 
 /* --------------------------
  * Dynamic locals
