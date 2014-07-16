@@ -1,9 +1,7 @@
 
 // Global to app
-express = require('express');
 require('sugar');
-
-ROOT = __dirname;
+express = require('express');
 
 if(!process.env.NODE_ENV)
   process.env.NODE_ENV = 'development';

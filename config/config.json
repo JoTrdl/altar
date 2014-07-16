@@ -1,0 +1,13 @@
+{
+  "title": "Nodebone",
+  "version": "1.0",
+  
+  "views": "app/views",
+  "controllers": "app/controllers",
+  "routes": "app/routes",
+  "static": "app/public",
+
+  "view engine": "jade",
+  "x-powered-by": null
+
+}
