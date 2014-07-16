@@ -2,6 +2,7 @@
   "title": "Nodebone",
   "version": "1.0",
   
+  "models": "app/models",
   "views": "app/views",
   "controllers": "app/controllers",
   "routes": "app/routes",

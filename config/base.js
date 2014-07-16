@@ -5,7 +5,7 @@ console.log('[Config] Loading config.json');
 var config = require(path.resolve('config', 'config.json'));
 
 // properties to be resolved
-var props = 'views,controllers,routes,static'.split(',');
+var props = 'models,views,controllers,routes,static'.split(',');
 props.forEach(function(prop){
   app.set(prop, path.resolve(config[prop]));
 });
