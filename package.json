@@ -18,6 +18,7 @@
     "sugar": "1.x.x",
     "express": "4.x.x",
     "socket.io": "1.x.x",
+    "socket.io-events": "0.x.x",
 
     "jade": "1.x.x",
     "body-parser": "1.x.x",
