@@ -6,7 +6,7 @@
   "views": "app/views",
   "controllers": "app/controllers",
   "routes": "app/routes",
-  "static": "app/public",
+  "static": "public",
 
   "view engine": "jade",
   "x-powered-by": null,

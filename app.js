@@ -14,4 +14,4 @@ require('./lib/configure');
 
 app.listen(port);
 
-console.log("Express server listening on port [%d] in [%s] mode", port, app.settings.env);
+console.log("[System] Express server listening on port [%d] in [%s] mode", port, app.settings.env);

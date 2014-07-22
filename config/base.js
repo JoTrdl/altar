@@ -21,7 +21,6 @@ app.use( require('body-parser').urlencoded({ extended: true }) );
 app.use( require('body-parser').json() );
 app.use( require('cookie-parser')() );
 app.use( require('method-override')() );
-app.use( require('morgan')({ format: ':method :url' }) );
 app.use( require('express-session')(app.settings['express-session']) );
 app.use( require('csurf')() );
 
@@ -41,5 +40,7 @@ app.use(function(req, res, next) {
  * --------------------------------------- */
 app.locals = {
   title: app.settings.title,
-  version: app.settings.version
+  version: app.settings.version,
+
+  moment: require('moment')
 };
