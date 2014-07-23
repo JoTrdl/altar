@@ -32,7 +32,9 @@
     "csurf": "1.x.x"
   },
   "devDependencies": {
-    
+    "grunt": "latest",
+    "grunt-contrib-watch": "latest",
+    "grunt-contrib-sass": "latest"
   },
   "engines": {
     "node": ">= 0.10.0"

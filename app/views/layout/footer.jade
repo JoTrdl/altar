@@ -4,3 +4,7 @@
 div.footer
   p
     | Copyright (c) #{year}
+
+  if environment != 'production'
+    p(style="position:absolute; right:5px; bottom: 5px;")
+      | #{environment}
