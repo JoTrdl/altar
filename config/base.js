@@ -1,11 +1,12 @@
 
-var path = require('path');
+var path = require('path'),
+    i18n = require('i18n');
 
 console.log('[Config] Loading config.json');
 var config = require(path.resolve('config', 'config.json'));
 
 // properties to be resolved
-var props = 'models,views,controllers,routes,static'.split(',');
+var props = 'models,views,controllers,routes,locales,static'.split(',');
 props.forEach(function(prop){
   app.set(prop, path.resolve(config[prop]));
 });
@@ -23,6 +24,17 @@ app.use( require('cookie-parser')() );
 app.use( require('method-override')() );
 app.use( require('express-session')(app.settings['express-session']) );
 app.use( require('csurf')() );
+
+/* --------------------------
+ * Localization
+ * --------------------------------------- */
+i18n.configure({
+  locales: ['en', 'fr'],
+  directory: app.settings.locales,
+  updateFiles: false
+});
+
+app.use(i18n.init);
 
 /* --------------------------
  * Dynamic locals
@@ -44,7 +56,6 @@ app.locals = {
 
   moment: require('moment')
 };
-
 
 // TODO: better config
 // Inititalize a socket server

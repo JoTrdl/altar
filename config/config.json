@@ -6,6 +6,7 @@
   "views": "app/views",
   "controllers": "app/controllers",
   "routes": "app/routes",
+  "locales": "app/locales",
   "static": "public",
 
   "view engine": "jade",

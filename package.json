@@ -19,7 +19,7 @@
     "express": "4.x.x",
     "socket.io": "1.x.x",
     "socket.io-events": "0.x.x",
-
+    "i18n": "0.x.x",
     "moment": "2.x.x",
     "jade": "1.x.x",
     "body-parser": "1.x.x",
