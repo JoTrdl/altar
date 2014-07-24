@@ -28,7 +28,7 @@ module.exports = function (grunt) {
     watch: {
       sass: {
         files: ["public/css/*.scss","public/css/**/*.scss"],
-        tasks: ["sass"],
+        tasks: ["sass:dev"],
         options: {
           livereload: true
         }
@@ -42,15 +42,8 @@ module.exports = function (grunt) {
   grunt.loadNpmTasks("grunt-contrib-watch");
   grunt.loadNpmTasks("grunt-contrib-sass");
 
-  grunt.registerTask("buildcss", [
-    "sass"
-  ]);
-  grunt.registerTask("watcher", [
-    "watch"
-  ]);
-  grunt.registerTask("watchcss", [
-    "watch:sass"
-  ]);
-
-  grunt.registerTask("default", ["buildcss"]);
+  grunt.registerTask("buildcss", ["sass:dev"]);
+  grunt.registerTask("watchcss", ["watch:sass"]);
+  
+  grunt.registerTask("default", ["buildcss", "watchcss"]);
 };

@@ -1,9 +1,11 @@
+/* line 13, css/app.scss */
 p {
   font-size: 1em;
   line-height: 1.75em;
   margin: 1.75em 0;
 }
 
+/* line 19, css/app.scss */
 h1, h2, h3, h4, h5, h6 {
   font-family: "Helvetica Neue", Helvetica, arial, sans-serif;
   font-weight: 400;
@@ -11,26 +13,32 @@ h1, h2, h3, h4, h5, h6 {
   margin: 1em 0;
 }
 
+/* line 26, css/app.scss */
 h1 {
   font-size: 2.5em;
 }
 
+/* line 27, css/app.scss */
 h2 {
   font-size: 2.25em;
 }
 
+/* line 28, css/app.scss */
 h3 {
   font-size: 2em;
 }
 
+/* line 29, css/app.scss */
 h4 {
   font-size: 1.75em;
 }
 
+/* line 30, css/app.scss */
 h5 {
   font-size: 1.5em;
 }
 
+/* line 31, css/app.scss */
 h6 {
   font-size: 1.25em;
 }
@@ -52,6 +60,7 @@ Copyright (c) Nicolas Gallagher and Jonathan Neal
 /**
  * Correct `block` display not defined in IE 6/7/8/9 and Firefox 3.
  */
+/* line 21, css/pure-0.5.0/sass/base.scss */
 article,
 aside,
 details,
@@ -70,6 +79,7 @@ summary {
 /**
  * Correct `inline-block` display not defined in IE 6/7/8/9 and Firefox 3.
  */
+/* line 40, css/pure-0.5.0/sass/base.scss */
 audio,
 canvas,
 video {
@@ -82,6 +92,7 @@ video {
  * Prevent modern browsers from displaying `audio` without controls.
  * Remove excess height in iOS 5 devices.
  */
+/* line 53, css/pure-0.5.0/sass/base.scss */
 audio:not([controls]) {
   display: none;
   height: 0;
@@ -91,6 +102,7 @@ audio:not([controls]) {
  * Address styling not present in IE 7/8/9, Firefox 3, and Safari 4.
  * Known issue: no IE 6 support.
  */
+/* line 63, css/pure-0.5.0/sass/base.scss */
 [hidden] {
   display: none;
 }
@@ -104,6 +116,7 @@ audio:not([controls]) {
  * 2. Prevent iOS text size adjust after orientation change, without disabling
  *    user zoom.
  */
+/* line 78, css/pure-0.5.0/sass/base.scss */
 html {
   font-size: 100%;
   /* 1 */
@@ -117,6 +130,7 @@ html {
  * Address `font-family` inconsistency between `textarea` and other form
  * elements.
  */
+/* line 89, css/pure-0.5.0/sass/base.scss */
 html,
 button,
 input,
@@ -128,6 +142,7 @@ textarea {
 /**
  * Address margins handled incorrectly in IE 6/7.
  */
+/* line 101, css/pure-0.5.0/sass/base.scss */
 body {
   margin: 0;
 }
@@ -138,6 +153,7 @@ body {
 /**
  * Address `outline` inconsistency between Chrome and other browsers.
  */
+/* line 113, css/pure-0.5.0/sass/base.scss */
 a:focus {
   outline: thin dotted;
 }
@@ -145,6 +161,7 @@ a:focus {
 /**
  * Improve readability when focused and also mouse hovered in all browsers.
  */
+/* line 121, css/pure-0.5.0/sass/base.scss */
 a:active,
 a:hover {
   outline: 0;
@@ -158,31 +175,37 @@ a:hover {
  * Address font sizes within `section` and `article` in Firefox 4+, Safari 5,
  * and Chrome.
  */
+/* line 136, css/pure-0.5.0/sass/base.scss */
 h1 {
   font-size: 2em;
   margin: 0.67em 0;
 }
 
+/* line 141, css/pure-0.5.0/sass/base.scss */
 h2 {
   font-size: 1.5em;
   margin: 0.83em 0;
 }
 
+/* line 146, css/pure-0.5.0/sass/base.scss */
 h3 {
   font-size: 1.17em;
   margin: 1em 0;
 }
 
+/* line 151, css/pure-0.5.0/sass/base.scss */
 h4 {
   font-size: 1em;
   margin: 1.33em 0;
 }
 
+/* line 156, css/pure-0.5.0/sass/base.scss */
 h5 {
   font-size: 0.83em;
   margin: 1.67em 0;
 }
 
+/* line 161, css/pure-0.5.0/sass/base.scss */
 h6 {
   font-size: 0.67em;
   margin: 2.33em 0;
@@ -191,6 +214,7 @@ h6 {
 /**
  * Address styling not present in IE 7/8/9, Safari 5, and Chrome.
  */
+/* line 170, css/pure-0.5.0/sass/base.scss */
 abbr[title] {
   border-bottom: 1px dotted;
 }
@@ -198,11 +222,13 @@ abbr[title] {
 /**
  * Address style set to `bolder` in Firefox 3+, Safari 4/5, and Chrome.
  */
+/* line 178, css/pure-0.5.0/sass/base.scss */
 b,
 strong {
   font-weight: bold;
 }
 
+/* line 183, css/pure-0.5.0/sass/base.scss */
 blockquote {
   margin: 1em 40px;
 }
@@ -210,6 +236,7 @@ blockquote {
 /**
  * Address styling not present in Safari 5 and Chrome.
  */
+/* line 191, css/pure-0.5.0/sass/base.scss */
 dfn {
   font-style: italic;
 }
@@ -218,6 +245,7 @@ dfn {
  * Address differences between Firefox and other browsers.
  * Known issue: no IE 6/7 normalization.
  */
+/* line 200, css/pure-0.5.0/sass/base.scss */
 hr {
   -moz-box-sizing: content-box;
   box-sizing: content-box;
@@ -227,6 +255,7 @@ hr {
 /**
  * Address styling not present in IE 6/7/8/9.
  */
+/* line 210, css/pure-0.5.0/sass/base.scss */
 mark {
   background: #ff0;
   color: #000;
@@ -235,6 +264,7 @@ mark {
 /**
  * Address margins set differently in IE 6/7.
  */
+/* line 219, css/pure-0.5.0/sass/base.scss */
 p,
 pre {
   margin: 1em 0;
@@ -243,6 +273,7 @@ pre {
 /**
  * Correct font family set oddly in IE 6, Safari 4/5, and Chrome.
  */
+/* line 228, css/pure-0.5.0/sass/base.scss */
 code,
 kbd,
 pre,
@@ -255,6 +286,7 @@ samp {
 /**
  * Improve readability of pre-formatted text in all browsers.
  */
+/* line 241, css/pure-0.5.0/sass/base.scss */
 pre {
   white-space: pre;
   white-space: pre-wrap;
@@ -264,6 +296,7 @@ pre {
 /**
  * Address CSS quotes not supported in IE 6/7.
  */
+/* line 251, css/pure-0.5.0/sass/base.scss */
 q {
   quotes: none;
 }
@@ -271,6 +304,7 @@ q {
 /**
  * Address `quotes` property not supported in Safari 4.
  */
+/* line 259, css/pure-0.5.0/sass/base.scss */
 q:before,
 q:after {
   content: '';
@@ -280,6 +314,7 @@ q:after {
 /**
  * Address inconsistent and variable font size in all browsers.
  */
+/* line 269, css/pure-0.5.0/sass/base.scss */
 small {
   font-size: 80%;
 }
@@ -287,6 +322,7 @@ small {
 /**
  * Prevent `sub` and `sup` affecting `line-height` in all browsers.
  */
+/* line 277, css/pure-0.5.0/sass/base.scss */
 sub,
 sup {
   font-size: 75%;
@@ -295,10 +331,12 @@ sup {
   vertical-align: baseline;
 }
 
+/* line 285, css/pure-0.5.0/sass/base.scss */
 sup {
   top: -0.5em;
 }
 
+/* line 289, css/pure-0.5.0/sass/base.scss */
 sub {
   bottom: -0.25em;
 }
@@ -309,6 +347,7 @@ sub {
 /**
  * Address margins set differently in IE 6/7.
  */
+/* line 301, css/pure-0.5.0/sass/base.scss */
 dl,
 menu,
 ol,
@@ -316,6 +355,7 @@ ul {
   margin: 1em 0;
 }
 
+/* line 308, css/pure-0.5.0/sass/base.scss */
 dd {
   margin: 0 0 0 40px;
 }
@@ -323,6 +363,7 @@ dd {
 /**
  * Address paddings set differently in IE 6/7.
  */
+/* line 316, css/pure-0.5.0/sass/base.scss */
 menu,
 ol,
 ul {
@@ -332,6 +373,7 @@ ul {
 /**
  * Correct list images handled incorrectly in IE 7.
  */
+/* line 326, css/pure-0.5.0/sass/base.scss */
 nav ul,
 nav ol {
   list-style: none;
@@ -345,6 +387,7 @@ nav ol {
  * 1. Remove border when inside `a` element in IE 6/7/8/9 and Firefox 3.
  * 2. Improve image quality when scaled in IE 7.
  */
+/* line 341, css/pure-0.5.0/sass/base.scss */
 img {
   border: 0;
   /* 1 */
@@ -355,6 +398,7 @@ img {
 /**
  * Correct overflow displayed oddly in IE 9.
  */
+/* line 350, css/pure-0.5.0/sass/base.scss */
 svg:not(:root) {
   overflow: hidden;
 }
@@ -365,6 +409,7 @@ svg:not(:root) {
 /**
  * Address margin not present in IE 6/7/8/9, Safari 5, and Opera 11.
  */
+/* line 362, css/pure-0.5.0/sass/base.scss */
 figure {
   margin: 0;
 }
@@ -375,6 +420,7 @@ figure {
 /**
  * Correct margin displayed oddly in IE 6/7.
  */
+/* line 374, css/pure-0.5.0/sass/base.scss */
 form {
   margin: 0;
 }
@@ -382,6 +428,7 @@ form {
 /**
  * Define consistent border, margin, and padding.
  */
+/* line 382, css/pure-0.5.0/sass/base.scss */
 fieldset {
   border: 1px solid #c0c0c0;
   margin: 0 2px;
@@ -393,6 +440,7 @@ fieldset {
  * 2. Correct text not wrapping in Firefox 3.
  * 3. Correct alignment displayed oddly in IE 6/7.
  */
+/* line 394, css/pure-0.5.0/sass/base.scss */
 legend {
   border: 0;
   /* 1 */
@@ -409,6 +457,7 @@ legend {
  *    and Chrome.
  * 3. Improve appearance and consistency in all browsers.
  */
+/* line 408, css/pure-0.5.0/sass/base.scss */
 button,
 input,
 select,
@@ -427,6 +476,7 @@ textarea {
  * Address Firefox 3+ setting `line-height` on `input` using `!important` in
  * the UA stylesheet.
  */
+/* line 423, css/pure-0.5.0/sass/base.scss */
 button,
 input {
   line-height: normal;
@@ -438,6 +488,7 @@ input {
  * Correct `button` style inheritance in Chrome, Safari 5+, and IE 6+.
  * Correct `select` style inheritance in Firefox 4+ and Opera.
  */
+/* line 435, css/pure-0.5.0/sass/base.scss */
 button,
 select {
   text-transform: none;
@@ -452,6 +503,7 @@ select {
  * 4. Remove inner spacing in IE 7 without affecting normal text inputs.
  *    Known issue: inner spacing remains in IE 6.
  */
+/* line 450, css/pure-0.5.0/sass/base.scss */
 button,
 html input[type="button"],
 input[type="reset"],
@@ -467,6 +519,7 @@ input[type="submit"] {
 /**
  * Re-set default cursor for disabled elements.
  */
+/* line 463, css/pure-0.5.0/sass/base.scss */
 button[disabled],
 html input[disabled] {
   cursor: default;
@@ -478,6 +531,7 @@ html input[disabled] {
  * 3. Remove excess padding in IE 7.
  *    Known issue: excess padding remains in IE 6.
  */
+/* line 475, css/pure-0.5.0/sass/base.scss */
 input[type="checkbox"],
 input[type="radio"] {
   box-sizing: border-box;
@@ -495,6 +549,7 @@ input[type="radio"] {
  * 2. Address `box-sizing` set to `border-box` in Safari 5 and Chrome
  *    (include `-moz` to future-proof).
  */
+/* line 489, css/pure-0.5.0/sass/base.scss */
 input[type="search"] {
   -webkit-appearance: textfield;
   /* 1 */
@@ -508,6 +563,7 @@ input[type="search"] {
  * Remove inner padding and search cancel button in Safari 5 and Chrome
  * on OS X.
  */
+/* line 501, css/pure-0.5.0/sass/base.scss */
 input[type="search"]::-webkit-search-cancel-button,
 input[type="search"]::-webkit-search-decoration {
   -webkit-appearance: none;
@@ -516,6 +572,7 @@ input[type="search"]::-webkit-search-decoration {
 /**
  * Remove inner padding and border in Firefox 3+.
  */
+/* line 510, css/pure-0.5.0/sass/base.scss */
 button::-moz-focus-inner,
 input::-moz-focus-inner {
   border: 0;
@@ -526,6 +583,7 @@ input::-moz-focus-inner {
  * 1. Remove default vertical scrollbar in IE 6/7/8/9.
  * 2. Improve readability and alignment in all browsers.
  */
+/* line 521, css/pure-0.5.0/sass/base.scss */
 textarea {
   overflow: auto;
   /* 1 */
@@ -539,6 +597,7 @@ textarea {
 /**
  * Remove most spacing between table cells.
  */
+/* line 534, css/pure-0.5.0/sass/base.scss */
 table {
   border-collapse: collapse;
   border-spacing: 0;
@@ -554,6 +613,7 @@ table {
 /**
  * Always hide an element when it has the `hidden` HTML attribute.
  */
+/* line 553, css/pure-0.5.0/sass/base.scss */
 [hidden] {
   display: none !important;
 }
@@ -562,6 +622,7 @@ table {
  * Add this class to an image to make it fit within it's fluid parent wrapper while maintaining
  * aspect ratio.
  */
+/* line 561, css/pure-0.5.0/sass/base.scss */
 .pure-img {
   max-width: 100%;
   height: auto;
@@ -569,16 +630,19 @@ table {
 }
 
 /* html, body base */
+/* line 2, css/layout/base.scss */
 html, body {
   padding: 0;
   margin: 0;
 }
 
+/* line 6, css/layout/base.scss */
 html {
   -webkit-tap-highlight-color: transparent;
   overflow: hidden;
 }
 
+/* line 10, css/layout/base.scss */
 body {
   width: 100%;
   overflow-x: hidden;
@@ -588,10 +652,12 @@ body {
 }
 
 /* <===== Start sticky footer */
+/* line 21, css/layout/base.scss */
 html, body {
   height: 100%;
 }
 
+/* line 24, css/layout/base.scss */
 .wrapper {
   min-height: 100%;
   height: auto !important;
@@ -600,48 +666,62 @@ html, body {
   /* the bottom margin is the negative value of the footer's height */
 }
 
+/* line 30, css/layout/base.scss */
 .footer, .push {
   height: 120px;
   /* '.push' must be the same height as 'footer' */
 }
 
 /* ====> End sticky footer */
+/* line 36, css/layout/base.scss */
 .viewport {
-  padding-top: 90px;
+  padding-top: 75px;
 }
 
+/* line 40, css/layout/base.scss */
 .content {
   width: 90%;
   margin: 0 auto;
   max-width: 720px;
 }
 
+/* line 1, css/layout/header.scss */
 .header {
   text-align: center;
-  min-height: 90px;
+  min-height: 75px;
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
+  background: #10105b;
+  background: -moz-linear-gradient(left, #10105b 0%, #5078e6 75%, #8daffc 100%);
+  background: -webkit-gradient(left top, right top, color-stop(0%, #10105b), color-stop(75%, #5078e6), color-stop(100%, #8daffc));
+  background: -webkit-linear-gradient(left, #10105b 0%, #5078e6 75%, #8daffc 100%);
+  background: -o-linear-gradient(left, #10105b 0%, #5078e6 75%, #8daffc 100%);
+  background: -ms-linear-gradient(left, #10105b 0%, #5078e6 75%, #8daffc 100%);
+  background: linear-gradient(to right, #10105b 0%, #5078e6 75%, #8daffc 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#10105b', endColorstr='#8daffc', GradientType=1 );
   display: table;
-  border-bottom: 1px solid #dddddd;
-  background-color: rgba(255, 255, 255, 0.95);
 }
+/* line 19, css/layout/header.scss */
 .header .wrapper {
   display: table-cell;
   vertical-align: middle;
 }
+/* line 24, css/layout/header.scss */
 .header .title {
   font-size: 2em;
   text-transform: uppercase;
-  color: #333;
+  color: #ECE51E;
 }
 
+/* line 2, css/layout/footer.scss */
 .footer {
   background-color: #DDDDDD;
   color: #777676;
   text-align: center;
 }
+/* line 7, css/layout/footer.scss */
 .footer p {
   margin: 0;
 }

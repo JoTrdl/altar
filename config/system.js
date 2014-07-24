@@ -17,7 +17,7 @@ props.forEach(function(prop){
   app.set(prop, config[prop]);
 });
 
-console.log('[Config] Configure base middleware');
+console.log('[Config] Configure system middleware');
 app.use( require('body-parser').urlencoded({ extended: true }) );
 app.use( require('body-parser').json() );
 app.use( require('cookie-parser')() );
@@ -53,6 +53,7 @@ app.use(function(req, res, next) {
 app.locals = {
   title: app.settings.title,
   version: app.settings.version,
+  environment: app.settings.env,
 
   moment: require('moment')
 };

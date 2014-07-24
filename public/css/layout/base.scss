@@ -1,0 +1,44 @@
+/* html, body base */
+html, body {
+  padding: 0;
+  margin: 0;
+}
+html {
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  overflow: hidden;
+}
+body {
+  width: 100%;
+  overflow-x: hidden;
+
+  background-color: #fff;
+  font: $body-font-style $body-font-variant $body-font-weight #{$body-font-size}/#{$body-line-height} $body-font-family;
+  color: $body-color;
+}
+
+
+/* <===== Start sticky footer */
+html, body {
+  height: 100%;
+}
+.wrapper {
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  margin: 0 auto -120px; /* the bottom margin is the negative value of the footer's height */
+}
+.footer, .push {
+  height: 120px; /* '.push' must be the same height as 'footer' */
+}
+/* ====> End sticky footer */
+
+
+.viewport {
+  padding-top: $header-height;
+}
+
+.content {
+  width: 90%;
+  margin: 0 auto;
+  max-width: 720px;
+}

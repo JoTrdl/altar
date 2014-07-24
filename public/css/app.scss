@@ -1,6 +1,43 @@
 
-html {
-  body {
-    background: blue;
-  }
+// Variables
+$body-font-style: normal;
+$body-font-variant: normal;
+$body-font-weight: 400;
+$body-font-size: 12px;
+$body-line-height: 175%;
+$body-font-family: "Lucida Grande", arial, sans-serif;
+$body-color: #111;
+
+$header-height: 90px;
+
+p {
+  font-size: 1em;
+  line-height: 1.75em;
+  margin: 1.75em 0;
 }
+
+h1,h2,h3,h4,h5,h6 {
+  font-family: "Helvetica Neue", Helvetica, arial, sans-serif;
+  font-weight: 400;
+  line-height: 1em;
+  margin:  1em 0;
+}
+
+h1 { font-size: 2.5em; }
+h2 { font-size: 2.25em; }
+h3 { font-size: 2em; }
+h4 { font-size: 1.75em; }
+h5 { font-size: 1.5em; }
+h6 { font-size: 1.25em; }
+
+
+$color-gray: #555;
+$color-gray-light: #999;
+$color-gray-lighter: #ddd;
+
+// Pure Framework
+@import "pure-0.5.0/sass/base";
+
+@import "layout/base";
+@import "layout/header";
+@import "layout/footer";

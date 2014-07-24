@@ -3,7 +3,7 @@
 require('sugar');
 express = require('express');
 
-if(!process.env.NODE_ENV)
+if (!process.env.NODE_ENV)
   process.env.NODE_ENV = 'development';
 
 var port = parseInt(process.env.PORT || 8080, 10);
