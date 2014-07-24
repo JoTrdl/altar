@@ -1,4 +1,7 @@
 
+// Pure Framework
+@import "pure-0.5.0/sass/base";
+
 // Variables
 $body-font-style: normal;
 $body-font-variant: normal;
@@ -13,7 +16,6 @@ $header-height: 90px;
 p {
   font-size: 1em;
   line-height: 1.75em;
-  margin: 1.75em 0;
 }
 
 h1,h2,h3,h4,h5,h6 {
@@ -34,9 +36,6 @@ h6 { font-size: 1.25em; }
 $color-gray: #555;
 $color-gray-light: #999;
 $color-gray-lighter: #ddd;
-
-// Pure Framework
-@import "pure-0.5.0/sass/base";
 
 @import "layout/base";
 @import "layout/header";
