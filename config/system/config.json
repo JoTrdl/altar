@@ -11,5 +11,16 @@
 
   "view engine": "jade",
   "x-powered-by": null,
-  "express-session": { "secret": "secret", "key": "app.sid", "saveUninitialized": true, "resave": true }
+  
+  "express-session": { 
+    "secret": "app_super_secret", 
+    "key": "app.sid", 
+    "saveUninitialized": true, 
+    "resave": true 
+  },
+
+  "i18n": {
+    "locales": ["en", "fr"],
+    "updateFiles": false
+  }
 }
