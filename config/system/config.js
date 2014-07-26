@@ -36,7 +36,7 @@ resolveProps.forEach(function(prop){
 
 // static properties, everything else
 Object.keys(config, function(prop, value) {
-  if (resolveProps.indexOf(prop) > 0) return;
+  if (resolveProps.indexOf(prop) >= 0) return;
   app.set(prop, value);
 });
 
