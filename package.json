@@ -12,7 +12,7 @@
     "restful",
     "websoket"
   ],
-  "repository": "JoTrdl/nodebone",
+  "repository": "JoTrdl/noapp",
   "license": "MIT",
   "dependencies": {
     "sugar": "1.x.x",
