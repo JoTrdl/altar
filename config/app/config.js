@@ -3,10 +3,10 @@ var path = require('path'),
     i18n = require('i18n');
 
 /*
-  Config system:
+   System config:
 
   config/
-    system/
+    app/
       config.json
       config.js
     development/
@@ -22,7 +22,7 @@ var path = require('path'),
  */
 
 console.log('[Config] Loading config.json');
-var config = require(path.resolve('config/system', 'config.json'));
+var config = require(path.resolve('config/app', 'config.json'));
 
 // merge base config with environment config
 var envConfig = require(path.resolve('config/' + process.env.NODE_ENV, 'config.json'));
