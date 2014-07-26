@@ -1,4 +1,4 @@
-nodebone
+NoApp
 ========
 
 A Node.js/Express template for a quick start. Supports web rendering / REST API / Websocket.
