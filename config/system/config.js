@@ -26,7 +26,7 @@ var config = require(path.resolve('config/system', 'config.json'));
 
 // merge base config with environment config
 var envConfig = require(path.resolve('config/' + process.env.NODE_ENV, 'config.json'));
-config = Object.merge(config, envConfig);
+config = Object.merge(config, envConfig, true);
 
 // properties to be resolved
 var resolveProps = 'models,views,controllers,routes,locales,static'.split(',');
@@ -51,7 +51,7 @@ app.use( require('csurf')() );
 /* --------------------------
  * Localization
  * --------------------------------------- */
-i18n.configure(Object.merge({directory: app.settings.locales}, app.settings.i18n || {} ));
+i18n.configure(Object.merge({directory: app.settings.locales}, app.settings.i18n || {}, true ));
 app.use(i18n.init);
 
 /* --------------------------
