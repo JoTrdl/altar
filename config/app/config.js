@@ -29,9 +29,15 @@ var envConfig = require(path.resolve('config/' + process.env.NODE_ENV, 'config.j
 config = Object.merge(config, envConfig, true);
 
 // properties to be resolved
-var resolveProps = 'models,views,controllers,routes,locales,static'.split(',');
+var resolveProps = 'models,views,controllers,routes,locales,static,logs'.split(',');
 resolveProps.forEach(function(prop){
   app.set(prop, path.resolve(config[prop]));
+});
+
+// configure logger
+logger.configure({
+  directory: app.settings.logs,
+  console: (app.settings.environment == 'development')
 });
 
 // static properties, everything else

@@ -1,10 +1,11 @@
 
+if (!process.env.NODE_ENV)
+  process.env.NODE_ENV = 'development';
+
 // Global to app
 require('sugar');
 express = require('express');
-
-if (!process.env.NODE_ENV)
-  process.env.NODE_ENV = 'development';
+logger = require('./lib/logger');
 
 var port = parseInt(process.env.PORT || 8080, 10);
 

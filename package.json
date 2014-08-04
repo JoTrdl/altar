@@ -29,7 +29,10 @@
     "express-session" : "1.x.x",
     "method-override": "2.x.x",
     "morgan" : "1.x.x",
-    "csurf": "1.x.x"
+    "csurf": "1.x.x",
+    
+    "bunyan": "0.x.x",
+    "bunyan-prettystream": "0.x.x"
   },
   "devDependencies": {
     "grunt": "latest",
