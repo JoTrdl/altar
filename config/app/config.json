@@ -7,7 +7,7 @@
   "controllers": "app/controllers",
   "routes": "app/routes",
   "locales": "app/locales",
-  "logs": "app/logs",
+  "logs": "logs",
   "static": "public",
 
   "view engine": "jade",

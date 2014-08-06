@@ -21,7 +21,6 @@ var path = require('path'),
   3 - Requrie ENV/config.js
  */
 
-console.log('[Config] Loading config.json');
 var config = require(path.resolve('config/app', 'config.json'));
 
 // merge base config with environment config
@@ -34,19 +33,21 @@ resolveProps.forEach(function(prop){
   app.set(prop, path.resolve(config[prop]));
 });
 
-// configure logger
-logger.configure({
-  directory: app.settings.logs,
-  console: (app.settings.environment == 'development')
-});
-
 // static properties, everything else
 Object.keys(config, function(prop, value) {
   if (resolveProps.indexOf(prop) >= 0) return;
   app.set(prop, value);
 });
 
-console.log('[Config] Configure base middleware');
+// configure logger
+log = require(path.resolve('lib', 'logger'))({
+  directory: app.settings.logs,
+  console: (app.settings.environment == 'development')
+});
+
+log.info('Config files loaded for [%s]', app.settings.environment);
+
+log.info('Configure base middleware');
 app.use( require('body-parser').urlencoded({ extended: true }) );
 app.use( require('body-parser').json() );
 app.use( require('cookie-parser')() );

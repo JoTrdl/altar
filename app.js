@@ -5,7 +5,6 @@ if (!process.env.NODE_ENV)
 // Global to app
 require('sugar');
 express = require('express');
-logger = require('./lib/logger');
 
 var port = parseInt(process.env.PORT || 8080, 10);
 
@@ -15,4 +14,4 @@ require('./lib/configure');
 
 app.listen(port);
 
-console.log("[System] Express server listening on port [%d] in [%s] mode", port, app.settings.env);
+log.info("Express server listening on port [%d] in [%s] mode", port, app.settings.env);

@@ -10,7 +10,7 @@ exports.notFound = function(req, res, next) {
 
 
 exports.serverError = function(err, req, res, next) {
-  console.error(err.stack);
+  log.error(err);
   if (req.xhr) {
     res.send(500, { error: 'Internal Server Error.' });
   } else {
@@ -22,6 +22,6 @@ exports.serverError = function(err, req, res, next) {
 
 exports.onUncaughtException = function(err) {
   // handle the error safely
-  console.error(err.stack);
+  log.error(err);
 };
 
