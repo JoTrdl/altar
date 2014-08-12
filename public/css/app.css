@@ -624,7 +624,9 @@ html, body {
   width: 100%;
   display: table;
   border-bottom: 1px solid #dddddd;
-  background-color: rgba(255, 255, 255, 0.95);
+  background-color: #5264ae;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.32);
+  box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.32);
 }
 .header .wrapper {
   display: table-cell;
@@ -632,14 +634,14 @@ html, body {
 }
 .header .title {
   font-size: 2em;
-  text-transform: uppercase;
-  color: #333;
+  color: #fff;
 }
 
 .footer {
-  background-color: #DDDDDD;
+  background-color: #b0bec5;
   color: #777676;
   text-align: center;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.5);
 }
 .footer p {
   margin: 0;

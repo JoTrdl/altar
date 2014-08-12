@@ -8,7 +8,11 @@
   display: table;
 
   border-bottom: 1px solid $color-gray-lighter;
-  background-color: rgba(255,255,255, .95);
+  background-color: #5264ae;
+
+  border-bottom: 1px solid rgba(0, 0, 0, 0.32);
+  box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.32);
+ 
 
   .wrapper {
     display: table-cell;
@@ -17,7 +21,6 @@
 
   .title {
     font-size: 2em;
-    text-transform: uppercase;
-    color: #333;
+    color: #fff;
   }
 }

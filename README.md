@@ -1,7 +1,16 @@
 NoApp
 ========
 
-A Node.js/Express template for a quick start. Supports web rendering / REST API / Websocket.
+A Full Stack App Template.
+
+Backend:
+
+A Node.js/Express server supporting web rendering / REST API / Websocket.
+
+Frontend:
+
+TBD.
+
 
 Folder structure
 ----

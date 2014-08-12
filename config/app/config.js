@@ -45,9 +45,9 @@ log = require(path.resolve('lib', 'logger'))({
   console: (app.settings.environment == 'development')
 });
 
-log.info('Config files loaded for [%s]', app.settings.environment);
+log.info('Config file loaded for [%s]', app.settings.environment);
 
-log.info('Configure base middleware');
+log.info('Configuring system middleware');
 app.use( require('body-parser').urlencoded({ extended: true }) );
 app.use( require('body-parser').json() );
 app.use( require('cookie-parser')() );

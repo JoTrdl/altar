@@ -1,5 +1,45 @@
 extends ./layout/base
 
 block content
-  p 
-   | Hello from node, #{__('Hello World')}
+  h1
+    | Form test
+
+  form(action='/', method='post')
+    input(type='hidden', name='_csrf', value='#{csrftoken}')
+    fieldset
+        legend Your Details
+        div
+          label(for='first_name') First Name:
+          br
+          input(type='text', name='first_name', value='', maxlength='100')
+          br
+        div
+          label(for='lunch') Lunch:
+          br
+          input(type='radio', name='lunch', value='pasta')
+          | Pasta
+          input(type='radio', name='lunch', value='fish')
+          | Fish
+        div
+          label(for='drinks') Drinks:
+          br
+          input(type='checkbox', name='drinks', value='beer')
+          | Beer
+          input(type='checkbox', name='drinks', value='wine')
+          | Wine
+        div
+          label(for='city') Preferred City:
+          br
+          select(name='city')
+            option(value='sydney') Sydney
+            option(value='melbourne') Melbourne
+            option(value='cromwell') Cromwell
+            option(value='queenstown') Queenstown
+        div
+          label(for='comments') Comments:
+          br
+          textarea(rows='3', cols='20', name='comments')
+        div
+          input(type='submit', value='Submit')
+
+  
