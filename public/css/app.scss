@@ -6,7 +6,7 @@
 $body-font-style: normal;
 $body-font-variant: normal;
 $body-font-weight: 400;
-$body-font-size: 12px;
+$body-font-size: 14px;
 $body-line-height: 175%;
 $body-font-family: "Lucida Grande", arial, sans-serif;
 $body-color: #111;
@@ -36,6 +36,8 @@ h6 { font-size: 1.25em; }
 $color-gray: #555;
 $color-gray-light: #999;
 $color-gray-lighter: #ddd;
+
+@import "components/forms";
 
 @import "layout/base";
 @import "layout/header";

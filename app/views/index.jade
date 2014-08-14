@@ -7,12 +7,13 @@ block content
   form(action='/', method='post')
     input(type='hidden', name='_csrf', value='#{csrftoken}')
     fieldset
-        legend Your Details
-        div
+        div.control-group
           label(for='first_name') First Name:
-          br
-          input(type='text', name='first_name', value='', maxlength='100')
-          br
+          input(type='text', name='first_name', value='', placeholder='Name')
+        div.control-group
+          label(for='first_name') Your last name:
+          input(type='text', name='first_name', value='', placeholder='Name')
+        br
         div
           label(for='lunch') Lunch:
           br

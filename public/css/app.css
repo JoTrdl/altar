@@ -567,6 +567,39 @@ h6 {
   font-size: 1.25em;
 }
 
+form input, form select, form textarea {
+  padding: .5em 0;
+  display: inline-block;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  outline: 0;
+  border: 0;
+  box-shadow: 0;
+  border-bottom: 1px solid #757575;
+  margin-bottom: 1px;
+}
+form input:focus, form select:focus, form textarea:focus {
+  border-bottom: 2px solid #5264AE;
+  margin-bottom: 0;
+}
+form fieldset {
+  margin: 0;
+  padding: .35em 0 .75em;
+  border: 0;
+}
+form .control-group {
+  margin-bottom: .5em;
+}
+form .control-group label {
+  text-align: right;
+  display: inline-block;
+  vertical-align: middle;
+  width: 10em;
+  margin: 0 1em 0 0;
+  padding: .7em 0;
+}
+
 /* html, body base */
 html, body {
   padding: 0;
@@ -582,7 +615,7 @@ body {
   width: 100%;
   overflow-x: hidden;
   background-color: #fff;
-  font: normal normal 400 12px/175% "Lucida Grande", arial, sans-serif;
+  font: normal normal 400 14px/175% "Lucida Grande", arial, sans-serif;
   color: #111111;
 }
 

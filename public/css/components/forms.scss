@@ -1,0 +1,39 @@
+
+form {
+  input, select, textarea {
+    padding: .5em 0;
+    display: inline-block;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+
+    outline: 0;
+    border: 0;
+    box-shadow: 0;
+
+    border-bottom: 1px solid #757575;
+    margin-bottom: 1px;
+    &:focus {
+      border-bottom: 2px solid #5264AE;
+      margin-bottom: 0;
+    }
+  }
+
+  fieldset {
+    margin: 0;
+    padding: .35em 0 .75em;
+    border: 0;
+  }
+
+  .control-group {
+    margin-bottom: .5em;
+    label {
+      text-align: right;
+      display: inline-block;
+      vertical-align: middle;
+      width: 10em;
+      margin: 0 1em 0 0;
+      padding: .7em 0;
+    }
+  }
+}
