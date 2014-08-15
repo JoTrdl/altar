@@ -1,5 +1,6 @@
 
 form {
+  // Genral input
   input, select, textarea {
     padding: .5em 0;
     display: inline-block;
@@ -19,6 +20,53 @@ form {
     }
   }
 
+  // input radio & input checkbox
+  input[type=radio], input[type=checkbox] {
+    padding: 0;
+    -webkit-appearance: none;
+    width: 10em;
+    border: 0;
+    position: absolute;
+    height: 1em;
+    margin-top: 1em;
+    z-index: 1;
+    top: 0;
+    cursor: pointer;
+    & + .label {
+      cursor: pointer;
+      margin-right: 1em;
+      vertical-align: middle;
+      &::before {
+        content: ' ';
+        background: #fff;
+        display: inline-block;
+        width: 1em;
+        height: 1em;
+        margin: 0 .5em -.2em 0;
+        -webkit-border-radius: 50%;
+        cursor: pointer;
+        border: 2px solid #757575;
+      }
+    }
+    &:checked + .label::before {
+      background: #0f9d58;
+      border: 2px solid #0f9d58;
+    }
+  }
+
+  input[type=checkbox] {
+    & + .label::before { 
+      -webkit-border-radius: 0;
+    }
+    &:checked + .label::before {
+      content: '✔';
+      line-height: 15px;
+      color: #0f9d58;
+      background: none;
+      border: 2px solid #0f9d58;
+    }
+  }
+
   fieldset {
     margin: 0;
     padding: .35em 0 .75em;
@@ -27,6 +75,7 @@ form {
 
   .control-group {
     margin-bottom: .5em;
+    position: relative;
     label {
       text-align: right;
       display: inline-block;

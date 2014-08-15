@@ -6,7 +6,8 @@
   left: 0;
   width: 100%;
   display: table;
-
+  z-index: 100;
+  
   border-bottom: 1px solid $color-gray-lighter;
   background-color: #5264ae;
 

@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*!
 Pure v0.5.0
 Copyright 2014 Yahoo! Inc. All rights reserved.
@@ -583,6 +584,48 @@ form input:focus, form select:focus, form textarea:focus {
   border-bottom: 2px solid #5264AE;
   margin-bottom: 0;
 }
+form input[type=radio], form input[type=checkbox] {
+  padding: 0;
+  -webkit-appearance: none;
+  width: 10em;
+  border: 0;
+  position: absolute;
+  height: 1em;
+  margin-top: 1em;
+  z-index: 1;
+  top: 0;
+  cursor: pointer;
+}
+form input[type=radio] + .label, form input[type=checkbox] + .label {
+  cursor: pointer;
+  margin-right: 1em;
+  vertical-align: middle;
+}
+form input[type=radio] + .label::before, form input[type=checkbox] + .label::before {
+  content: ' ';
+  background: #fff;
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  margin: 0 .5em -.2em 0;
+  -webkit-border-radius: 50%;
+  cursor: pointer;
+  border: 2px solid #757575;
+}
+form input[type=radio]:checked + .label::before, form input[type=checkbox]:checked + .label::before {
+  background: #0f9d58;
+  border: 2px solid #0f9d58;
+}
+form input[type=checkbox] + .label::before {
+  -webkit-border-radius: 0;
+}
+form input[type=checkbox]:checked + .label::before {
+  content: '✔';
+  line-height: 15px;
+  color: #0f9d58;
+  background: none;
+  border: 2px solid #0f9d58;
+}
 form fieldset {
   margin: 0;
   padding: .35em 0 .75em;
@@ -590,6 +633,7 @@ form fieldset {
 }
 form .control-group {
   margin-bottom: .5em;
+  position: relative;
 }
 form .control-group label {
   text-align: right;
@@ -656,6 +700,7 @@ html, body {
   left: 0;
   width: 100%;
   display: table;
+  z-index: 100;
   border-bottom: 1px solid #dddddd;
   background-color: #5264ae;
   border-bottom: 1px solid rgba(0, 0, 0, 0.32);
@@ -674,6 +719,7 @@ html, body {
   background-color: #b0bec5;
   color: #777676;
   text-align: center;
+  position: relative;
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.5);
 }
 .footer p {
