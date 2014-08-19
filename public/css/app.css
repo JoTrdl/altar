@@ -1,4 +1,3 @@
-@charset "UTF-8";
 /*!
 Pure v0.5.0
 Copyright 2014 Yahoo! Inc. All rights reserved.
@@ -574,15 +573,24 @@ form input, form select, form textarea {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
+  width: 20em;
   outline: 0;
   border: 0;
   box-shadow: 0;
   border-bottom: 1px solid #757575;
   margin-bottom: 1px;
 }
-form input:focus, form select:focus, form textarea:focus {
-  border-bottom: 2px solid #5264AE;
-  margin-bottom: 0;
+form input + .focus, form select + .focus, form textarea + .focus {
+  background: #5264AE;
+  height: 2px;
+  width: 0;
+  position: absolute;
+  bottom: .4em;
+  left: 11.3em;
+  transition: all ease 0.2s;
+}
+form input:focus + .focus, form select:focus + .focus, form textarea:focus + .focus {
+  width: 20em;
 }
 form input[type=radio], form input[type=checkbox] {
   padding: 0;
@@ -598,33 +606,69 @@ form input[type=radio], form input[type=checkbox] {
 }
 form input[type=radio] + .label, form input[type=checkbox] + .label {
   cursor: pointer;
-  margin-right: 1em;
+  margin-right: 1.2em;
   vertical-align: middle;
+  position: relative;
 }
-form input[type=radio] + .label::before, form input[type=checkbox] + .label::before {
+form input[type=radio] + .label::before, form input[type=radio] + .label::after, form input[type=checkbox] + .label::before, form input[type=checkbox] + .label::after {
   content: ' ';
-  background: #fff;
+  background: transparent;
   display: inline-block;
   width: 1em;
   height: 1em;
-  margin: 0 .5em -.2em 0;
+  margin: 0 1em -.2em 0;
   -webkit-border-radius: 50%;
   cursor: pointer;
   border: 2px solid #757575;
 }
+form input[type=radio] + .label::after, form input[type=checkbox] + .label::after {
+  content: '';
+  width: 3em;
+  height: 3em;
+  -webkit-transform: scale(0);
+  -webkit-border-radius: 50%;
+  background: #5264AE;
+  position: absolute;
+  left: -.82em;
+  top: -.82em;
+  border: none;
+  transition: all ease 0.1s;
+  opacity: 0;
+  z-index: -1;
+}
+form input[type=radio]:active + .label::after, form input[type=checkbox]:active + .label::after {
+  opacity: .25;
+  -webkit-transform: scale(1.2);
+}
 form input[type=radio]:checked + .label::before, form input[type=checkbox]:checked + .label::before {
-  background: #0f9d58;
-  border: 2px solid #0f9d58;
+  background: #5264AE;
+  border: 2px solid #5264AE;
 }
 form input[type=checkbox] + .label::before {
   -webkit-border-radius: 0;
 }
 form input[type=checkbox]:checked + .label::before {
-  content: '✔';
+  content: '';
   line-height: 15px;
-  color: #0f9d58;
+  color: #5264AE;
+  background: #5264AE;
+  border: 2px solid #5264AE;
+}
+form select {
+  -webkit-appearance: none;
+  -webkit-border-radius: 0;
   background: none;
-  border: 2px solid #0f9d58;
+}
+form select.unselected {
+  color: darkgray;
+}
+form textarea {
+  padding: .5em .5em .5em 0;
+  margin-top: .5em;
+  max-width: 20em;
+}
+form textarea + .focus {
+  bottom: 0;
 }
 form fieldset {
   margin: 0;

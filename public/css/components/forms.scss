@@ -8,6 +8,8 @@ form {
     -moz-box-sizing: border-box;
     box-sizing: border-box;
 
+    width: 20em;
+
     outline: 0;
     border: 0;
     box-shadow: 0;
@@ -15,8 +17,21 @@ form {
     border-bottom: 1px solid #757575;
     margin-bottom: 1px;
     &:focus {
-      border-bottom: 2px solid #5264AE;
-      margin-bottom: 0;
+      //border-bottom: 2px solid #5264AE;
+      //margin-bottom: 0;
+    }
+
+    & + .focus {
+      background: #5264AE;
+      height: 2px;
+      width: 0;
+      position: absolute;
+      bottom: .4em;
+      left: 11.3em;
+      transition: all ease 0.2s;
+    }
+    &:focus + .focus {
+      width: 20em;
     }
   }
 
@@ -34,23 +49,45 @@ form {
     cursor: pointer;
     & + .label {
       cursor: pointer;
-      margin-right: 1em;
+      margin-right: 1.2em;
       vertical-align: middle;
-      &::before {
+      position: relative;
+      &::before, &::after {
         content: ' ';
-        background: #fff;
+        background: rgba(0,0,0,0);
         display: inline-block;
         width: 1em;
         height: 1em;
-        margin: 0 .5em -.2em 0;
+        margin: 0 1em -.2em 0;
         -webkit-border-radius: 50%;
         cursor: pointer;
         border: 2px solid #757575;
       }
     }
+
+    & + .label::after { 
+      content: '';
+      width: 3em;
+      height: 3em;
+      -webkit-transform: scale(0);
+      -webkit-border-radius: 50%;
+      background: #5264AE;
+      position: absolute;
+      left: -.82em;
+      top: -.82em;
+      border: none;
+      transition: all ease 0.1s;
+      opacity: 0;
+      z-index: -1;
+    }
+    &:active + .label::after {
+      opacity: .25;
+      -webkit-transform: scale(1.2);
+    }
+
     &:checked + .label::before {
-      background: #0f9d58;
-      border: 2px solid #0f9d58;
+      background: #5264AE;
+      border: 2px solid #5264AE;
     }
   }
 
@@ -59,13 +96,31 @@ form {
       -webkit-border-radius: 0;
     }
     &:checked + .label::before {
-      content: '✔';
+      content: '';
       line-height: 15px;
-      color: #0f9d58;
-      background: none;
-      border: 2px solid #0f9d58;
+      color: #5264AE;
+      background: #5264AE;
+      border: 2px solid #5264AE;
     }
   }
+
+  select {
+    -webkit-appearance: none;
+    -webkit-border-radius: 0;
+    background: none;
+
+    &.unselected {
+      color: rgb(169, 169, 169);
+    }
+  }
+
+  textarea {
+    padding: .5em .5em .5em 0;
+    margin-top: .5em;
+    max-width: 20em;
+  }
+  
+  textarea + .focus { bottom: 0; }
 
   fieldset {
     margin: 0;

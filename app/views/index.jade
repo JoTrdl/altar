@@ -9,10 +9,16 @@ block content
     fieldset
         div.control-group
           label(for='first_name') First Name:
-          input(type='text', name='first_name', value='', placeholder='Name')
+          input(type='text', name='first_name', value='', placeholder='Enter First Name')
+          span.focus
         div.control-group
-          label(for='first_name') Your last name:
-          input(type='text', name='first_name', value='', placeholder='Name')
+          label(for='last_name') Last name:
+          input(type='text', name='last_name', value='', placeholder='Enter Last Name')
+          span.focus
+        div.control-group
+          label(for='email') Email:
+          input(type='email', name='email', value='', placeholder='Enter Email', validate, required)
+          span.focus
         div.control-group
           label(for='lunch') Lunch:
           input(type='radio', name='lunch', value='pasta')
@@ -27,14 +33,17 @@ block content
           span.label Wine
         div.control-group
           label(for='city') Preferred City:
-          select(name='city')
+          select.unselected(name='city', onchange="this.className = this.className.replace(/unselected/,'');")
+            option(value='', disabled, selected) Choose
             option(value='sydney') Sydney
             option(value='melbourne') Melbourne
             option(value='cromwell') Cromwell
             option(value='queenstown') Queenstown
+          span.focus
         div.control-group
           label(for='comments') Comments:
           textarea(rows='3', cols='20', name='comments')
+          span.focus
         div.control-group
           label
           input(type='submit', value='Submit')
