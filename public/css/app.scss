@@ -1,8 +1,7 @@
 
-// Pure Framework
-@import "pure-0.5.0/sass/base";
-
-// Variables
+/* ----------------------------
+ * Variables
+ * ------------------------------------------------------- */
 $body-font-style: normal;
 $body-font-variant: normal;
 $body-font-weight: 400;
@@ -32,13 +31,20 @@ h4 { font-size: 1.75em; }
 h5 { font-size: 1.5em; }
 h6 { font-size: 1.25em; }
 
-
 $color-gray: #555;
 $color-gray-light: #999;
 $color-gray-lighter: #ddd;
 
+/* ----------------------------
+ * Components
+ * ------------------------------------------------------- */
+@import "components/normalize.scss";
+@import "components/simplegrid.scss";
 @import "components/forms";
 
+/* ----------------------------
+ * Layouts
+ * ------------------------------------------------------- */
 @import "layout/base";
 @import "layout/header";
 @import "layout/footer";
