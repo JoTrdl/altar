@@ -848,6 +848,42 @@ form .control-group label {
   padding: .7em 0;
 }
 
+.control {
+  margin-bottom: .5em;
+  position: relative;
+}
+.control label {
+  display: block;
+  vertical-align: middle;
+  margin: 0 1em 0 0;
+  padding: .7em 0;
+}
+.control input, .control select, .control textarea {
+  padding: .5em 0;
+  display: block;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 20em;
+  outline: 0;
+  border: 0;
+  box-shadow: 0;
+  border-bottom: 1px solid #757575;
+  margin-bottom: 1px;
+}
+.control input + .focus, .control select + .focus, .control textarea + .focus {
+  background: #5264AE;
+  height: 2px;
+  width: 0;
+  position: absolute;
+  bottom: .7em;
+  left: 0;
+  transition: all ease 0.2s;
+}
+.control input:focus + .focus, .control select:focus + .focus, .control textarea:focus + .focus {
+  width: 20em;
+}
+
 /* ----------------------------
  * Layouts
  * ------------------------------------------------------- */

@@ -6,6 +6,10 @@ block content
 
   form(action='/', method='post')
     input(type='hidden', name='_csrf', value='#{csrftoken}')
+    div.control
+      label(for='first_name') First Name
+        input(type='text', name='first_name', value='', placeholder='Enter First Name')
+        span.focus
     fieldset
         div.control-group
           label(for='first_name') First Name:

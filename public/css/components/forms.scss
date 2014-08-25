@@ -142,3 +142,47 @@ form {
     }
   }
 }
+
+
+
+.control {
+  margin-bottom: .5em;
+  position: relative;
+
+  label {
+    display: block;
+    vertical-align: middle;
+    margin: 0 1em 0 0;
+    padding: .7em 0;
+  }
+
+  input, select, textarea {
+    padding: .5em 0;
+    display: block;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+
+    width: 20em;
+
+    outline: 0;
+    border: 0;
+    box-shadow: 0;
+
+    border-bottom: 1px solid #757575;
+    margin-bottom: 1px;
+
+    & + .focus {
+      background: #5264AE;
+      height: 2px;
+      width: 0;
+      position: absolute;
+      bottom: .7em;
+      left: 0;
+      transition: all ease 0.2s;
+    }
+    &:focus + .focus {
+      width: 20em;
+    }
+  }
+}
