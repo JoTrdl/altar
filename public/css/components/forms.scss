@@ -34,11 +34,12 @@
       width: 0;
       position: absolute;
       bottom: 0;
-      left: 0;
+      left: 10em;
       transition: all ease 0.2s;
     }
     &:focus + .focus {
       width: 20em;
+      left: 0;
     }
   }
 
@@ -115,9 +116,23 @@
     -webkit-appearance: none;
     -webkit-border-radius: 0;
     background: none;
-    
+
     &.unselected {
       color: rgb(169, 169, 169);
+    }
+  }
+
+  button {
+    outline: 0;
+    width: 8em;
+    text-transform: uppercase;
+    color: #fff;
+    background: #4e6cef;
+    border: 0;
+    height: 3em;
+
+    &:after {
+      content: "";
     }
   }
 }

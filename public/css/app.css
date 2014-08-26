@@ -756,11 +756,12 @@ body {
   width: 0;
   position: absolute;
   bottom: 0;
-  left: 0;
+  left: 10em;
   transition: all ease 0.2s;
 }
 .control input:focus + .focus, .control select:focus + .focus, .control textarea:focus + .focus {
   width: 20em;
+  left: 0;
 }
 .control input[type=radio], .control input[type=checkbox] {
   padding: 0;
@@ -830,6 +831,18 @@ body {
 }
 .control select.unselected {
   color: darkgray;
+}
+.control button {
+  outline: 0;
+  width: 8em;
+  text-transform: uppercase;
+  color: #fff;
+  background: #4e6cef;
+  border: 0;
+  height: 3em;
+}
+.control button:after {
+  content: "";
 }
 
 /* ----------------------------
