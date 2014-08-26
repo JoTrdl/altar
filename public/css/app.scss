@@ -37,7 +37,7 @@ $color-gray-lighter: #ddd;
 
 
 /* ----------------------------
- * Components
+ * Mixins
  * ------------------------------------------------------- */
 @import "components/mixins.scss";
 
@@ -54,3 +54,8 @@ $color-gray-lighter: #ddd;
 @import "layout/base";
 @import "layout/header";
 @import "layout/footer";
+
+/* ----------------------------
+ * Demo
+ * ------------------------------------------------------- */
+@import "demo/grid";

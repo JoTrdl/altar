@@ -38,7 +38,7 @@ h6 {
 }
 
 /* ----------------------------
- * Components
+ * Mixins
  * ------------------------------------------------------- */
 /* ----------------------------
  * Components
@@ -446,14 +446,11 @@ th {
   Author - Dallas Bass
   Site - dallasbass.com
 */
-*, *:after, *:before {
+.grid, .grid:after, .grid:before,
+[class*='col-'], [class*='col-']:after, [class*='col-']:before {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-}
-
-body {
-  margin: 0px;
 }
 
 [class*='col-'] {
@@ -1018,6 +1015,21 @@ html, body {
 }
 .footer p {
   margin: 0;
+}
+
+/* ----------------------------
+ * Demo
+ * ------------------------------------------------------- */
+.demo .grid {
+  border: 1px solid #ddd;
+  text-align: center;
+  padding: 10px 0 10px 20px;
+  margin: 2em 0;
+}
+.demo .grid .column {
+  background: #eee;
+  margin: 1em 0;
+  border: 1px solid #ccc;
 }
 
 /*# sourceMappingURL=app.css.map */

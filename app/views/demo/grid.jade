@@ -1,0 +1,11 @@
+extends ../layout/base
+
+block content
+  div.demo
+    h1 Grid System
+    div.grid.grid-pad
+      - for (var i = 1; i <= 12; i++)
+        - for (var j = 1; j <= i; j++)
+            div(class='col-1-' + i)
+              div.column= i
+
