@@ -777,12 +777,12 @@ input:focus + .focus, select:focus + .focus, textarea:focus + .focus {
  * Radio & Checkbox
  * ----------------------------------------------------- */
 input[type=radio], input[type=checkbox] {
-  padding: 0;
   -webkit-appearance: none;
   -ms-appearance: none;
   -moz-appearance: none;
   -o-appearance: none;
   appearance: none;
+  padding: 0;
   width: 100%;
   border: 0;
   position: absolute;
@@ -809,6 +809,11 @@ input[type=radio] + .label:before, input[type=radio] + .label:after, input[type=
   -moz-border-radius: 50%;
   -o-border-radius: 50%;
   border-radius: 50%;
+  -webkit-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
   cursor: pointer;
   border: 2px solid #757575;
 }

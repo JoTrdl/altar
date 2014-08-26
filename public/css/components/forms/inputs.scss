@@ -35,8 +35,8 @@ input, select, textarea {
  * Radio & Checkbox
  * ----------------------------------------------------- */
 input[type=radio], input[type=checkbox] {
-  padding: 0;
   @include vendor-prefix(appearance, none);
+  padding: 0;
   width: 100%;
   border: 0;
   position: absolute;
@@ -58,6 +58,7 @@ input[type=radio], input[type=checkbox] {
       height: 1em;
       margin: -.1em 1em -.1em 0;
       @include vendor-prefix(border-radius, 50%);
+      @include vendor-prefix(box-sizing, border-box);
       cursor: pointer;
       border: 2px solid #757575;
     }
