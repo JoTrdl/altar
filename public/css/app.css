@@ -40,6 +40,9 @@ h6 {
 /* ----------------------------
  * Components
  * ------------------------------------------------------- */
+/* ----------------------------
+ * Components
+ * ------------------------------------------------------- */
 /*! normalize.css v3.0.1 | MIT License | git.io/normalize */
 /**
  * 1. Set default font family to sans-serif.
@@ -724,6 +727,9 @@ body {
     height: 0;
   }
 }
+/* -----------------------------
+ * Wrapper
+ * ----------------------------------------------------- */
 .control {
   margin-bottom: 1em;
   position: relative;
@@ -737,11 +743,17 @@ body {
 .control .check {
   position: relative;
 }
-.control input, .control select, .control textarea {
+
+/* -----------------------------
+ * General inputs
+ * ----------------------------------------------------- */
+input, select, textarea {
   padding: .5em 0;
   display: block;
   -webkit-box-sizing: border-box;
+  -ms-box-sizing: border-box;
   -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
   box-sizing: border-box;
   width: 20em;
   outline: 0;
@@ -750,8 +762,8 @@ body {
   border-bottom: 1px solid #757575;
   margin-bottom: 1px;
 }
-.control input + .focus, .control select + .focus, .control textarea + .focus {
-  background: #5264AE;
+input + .focus, select + .focus, textarea + .focus {
+  background: #5264ae;
   height: 2px;
   width: 0;
   position: absolute;
@@ -759,13 +771,21 @@ body {
   left: 10em;
   transition: all ease 0.2s;
 }
-.control input:focus + .focus, .control select:focus + .focus, .control textarea:focus + .focus {
+input:focus + .focus, select:focus + .focus, textarea:focus + .focus {
   width: 20em;
   left: 0;
 }
-.control input[type=radio], .control input[type=checkbox] {
+
+/* -----------------------------
+ * Radio & Checkbox
+ * ----------------------------------------------------- */
+input[type=radio], input[type=checkbox] {
   padding: 0;
   -webkit-appearance: none;
+  -ms-appearance: none;
+  -moz-appearance: none;
+  -o-appearance: none;
+  appearance: none;
   width: 100%;
   border: 0;
   position: absolute;
@@ -774,13 +794,13 @@ body {
   top: 0;
   cursor: pointer;
 }
-.control input[type=radio] + .label, .control input[type=checkbox] + .label {
+input[type=radio] + .label, input[type=checkbox] + .label {
   cursor: pointer;
   margin-right: 1.2em;
   vertical-align: middle;
   position: relative;
 }
-.control input[type=radio] + .label:before, .control input[type=radio] + .label:after, .control input[type=checkbox] + .label:before, .control input[type=checkbox] + .label:after {
+input[type=radio] + .label:before, input[type=radio] + .label:after, input[type=checkbox] + .label:before, input[type=checkbox] + .label:after {
   content: ' ';
   background: transparent;
   display: inline-block;
@@ -788,16 +808,28 @@ body {
   height: 1em;
   margin: -.1em 1em -.1em 0;
   -webkit-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -o-border-radius: 50%;
+  border-radius: 50%;
   cursor: pointer;
   border: 2px solid #757575;
 }
-.control input[type=radio] + .label:after, .control input[type=checkbox] + .label:after {
+input[type=radio] + .label:after, input[type=checkbox] + .label:after {
   content: '';
   width: 3em;
   height: 3em;
   -webkit-transform: scale(0);
+  -ms-transform: scale(0);
+  -moz-transform: scale(0);
+  -o-transform: scale(0);
+  transform: scale(0);
   -webkit-border-radius: 50%;
-  background: #5264AE;
+  -ms-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -o-border-radius: 50%;
+  border-radius: 50%;
+  background: #5264ae;
   position: absolute;
   left: -1em;
   top: -.75em;
@@ -806,33 +838,58 @@ body {
   opacity: 0;
   z-index: -1;
 }
-.control input[type=radio]:active + .label:after, .control input[type=checkbox]:active + .label:after {
+input[type=radio]:active + .label:after, input[type=checkbox]:active + .label:after {
   opacity: .25;
   -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -o-transform: scale(1.1);
+  transform: scale(1.1);
 }
-.control input[type=radio]:checked + .label:before, .control input[type=checkbox]:checked + .label:before {
-  background: #5264AE;
-  border: 2px solid #5264AE;
+input[type=radio]:checked + .label:before, input[type=checkbox]:checked + .label:before {
+  background: #5264ae;
+  border: 2px solid #5264ae;
 }
-.control input[type=checkbox] + .label:before {
+
+input[type=checkbox] + .label:before {
   -webkit-border-radius: 0;
+  -ms-border-radius: 0;
+  -moz-border-radius: 0;
+  -o-border-radius: 0;
+  border-radius: 0;
 }
-.control input[type=checkbox]:checked + .label:before {
+input[type=checkbox]:checked + .label:before {
   content: '';
   line-height: 15px;
-  color: #5264AE;
-  background: #5264AE;
-  border: 2px solid #5264AE;
+  color: #5264ae;
+  background: #5264ae;
+  border: 2px solid #5264ae;
 }
-.control select {
+
+/* -----------------------------
+ * Select
+ * ----------------------------------------------------- */
+select {
   -webkit-appearance: none;
+  -ms-appearance: none;
+  -moz-appearance: none;
+  -o-appearance: none;
+  appearance: none;
   -webkit-border-radius: 0;
+  -ms-border-radius: 0;
+  -moz-border-radius: 0;
+  -o-border-radius: 0;
+  border-radius: 0;
   background: none;
 }
-.control select.unselected {
+select.unselected {
   color: darkgray;
 }
-.control button {
+
+/* -----------------------------
+ * Buttons
+ * ----------------------------------------------------- */
+button {
   outline: 0;
   width: 8em;
   text-transform: uppercase;
@@ -843,31 +900,36 @@ body {
   position: relative;
   overflow: hidden;
 }
-.control button .focus {
+button .focus {
   width: 0;
   height: 0;
   top: 50%;
   left: 50%;
   background: #fff;
   -webkit-transform: translateX(-50%) translateY(-50%);
-  -moz-transform: translateX(-50%) translateY(-50%);
   -ms-transform: translateX(-50%) translateY(-50%);
+  -moz-transform: translateX(-50%) translateY(-50%);
+  -o-transform: translateX(-50%) translateY(-50%);
   transform: translateX(-50%) translateY(-50%);
   position: absolute;
   opacity: 0;
   -webkit-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -o-border-radius: 50%;
+  border-radius: 50%;
   transition: all ease 0.1s;
   opacity: 0;
 }
-.control button:hover {
+button:hover {
   text-shadow: 0px 0px 1px #222;
 }
-.control button:hover .focus {
+button:hover .focus {
   opacity: .25;
   width: 80%;
   height: 200%;
 }
-.control button:active .focus {
+button:active .focus {
   width: 100%;
   height: 200%;
   -webkit-border-radius: 0%;

@@ -35,12 +35,18 @@ $color-gray: #555;
 $color-gray-light: #999;
 $color-gray-lighter: #ddd;
 
+
+/* ----------------------------
+ * Components
+ * ------------------------------------------------------- */
+@import "components/mixins.scss";
+
 /* ----------------------------
  * Components
  * ------------------------------------------------------- */
 @import "components/normalize.scss";
 @import "components/simplegrid.scss";
-@import "components/forms";
+@import "components/forms/forms.scss";
 
 /* ----------------------------
  * Layouts
