@@ -724,139 +724,18 @@ body {
     height: 0;
   }
 }
-form input, form select, form textarea {
-  padding: .5em 0;
-  display: inline-block;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  width: 20em;
-  outline: 0;
-  border: 0;
-  box-shadow: 0;
-  border-bottom: 1px solid #757575;
-  margin-bottom: 1px;
-}
-form input + .focus, form select + .focus, form textarea + .focus {
-  background: #5264AE;
-  height: 2px;
-  width: 0;
-  position: absolute;
-  bottom: .5em;
-  left: 11.3em;
-  transition: all ease 0.2s;
-}
-form input:focus + .focus, form select:focus + .focus, form textarea:focus + .focus {
-  width: 20em;
-}
-form input[type=radio], form input[type=checkbox] {
-  padding: 0;
-  -webkit-appearance: none;
-  width: 10em;
-  border: 0;
-  position: absolute;
-  height: 1em;
-  margin-top: 1em;
-  z-index: 1;
-  top: 0;
-  cursor: pointer;
-}
-form input[type=radio] + .label, form input[type=checkbox] + .label {
-  cursor: pointer;
-  margin-right: 1.2em;
-  vertical-align: middle;
-  position: relative;
-}
-form input[type=radio] + .label::before, form input[type=radio] + .label::after, form input[type=checkbox] + .label::before, form input[type=checkbox] + .label::after {
-  content: ' ';
-  background: transparent;
-  display: inline-block;
-  width: 1em;
-  height: 1em;
-  margin: 0 1em -.2em 0;
-  -webkit-border-radius: 50%;
-  cursor: pointer;
-  border: 2px solid #757575;
-}
-form input[type=radio] + .label::after, form input[type=checkbox] + .label::after {
-  content: '';
-  width: 3em;
-  height: 3em;
-  -webkit-transform: scale(0);
-  -webkit-border-radius: 50%;
-  background: #5264AE;
-  position: absolute;
-  left: -.82em;
-  top: -.82em;
-  border: none;
-  transition: all ease 0.1s;
-  opacity: 0;
-  z-index: -1;
-}
-form input[type=radio]:active + .label::after, form input[type=checkbox]:active + .label::after {
-  opacity: .25;
-  -webkit-transform: scale(1.2);
-}
-form input[type=radio]:checked + .label::before, form input[type=checkbox]:checked + .label::before {
-  background: #5264AE;
-  border: 2px solid #5264AE;
-}
-form input[type=checkbox] + .label::before {
-  -webkit-border-radius: 0;
-}
-form input[type=checkbox]:checked + .label::before {
-  content: '';
-  line-height: 15px;
-  color: #5264AE;
-  background: #5264AE;
-  border: 2px solid #5264AE;
-}
-form select {
-  -webkit-appearance: none;
-  -webkit-border-radius: 0;
-  background: none;
-}
-form select + .focus {
-  bottom: .2em;
-}
-form select.unselected {
-  color: darkgray;
-}
-form textarea {
-  padding: .5em .5em .5em 0;
-  margin-top: .5em;
-  max-width: 20em;
-}
-form textarea + .focus {
-  bottom: 0;
-}
-form fieldset {
-  margin: 0;
-  padding: .35em 0 .75em;
-  border: 0;
-}
-form .control-group {
-  margin-bottom: .5em;
-  position: relative;
-}
-form .control-group label {
-  text-align: right;
-  display: inline-block;
-  vertical-align: middle;
-  width: 10em;
-  margin: 0 1em 0 0;
-  padding: .7em 0;
-}
-
 .control {
-  margin-bottom: .5em;
+  margin-bottom: 1em;
   position: relative;
 }
 .control label {
   display: block;
   vertical-align: middle;
   margin: 0 1em 0 0;
-  padding: .7em 0;
+  padding: .2em 0;
+}
+.control .check {
+  position: relative;
 }
 .control input, .control select, .control textarea {
   padding: .5em 0;
@@ -876,12 +755,81 @@ form .control-group label {
   height: 2px;
   width: 0;
   position: absolute;
-  bottom: .7em;
+  bottom: 0;
   left: 0;
   transition: all ease 0.2s;
 }
 .control input:focus + .focus, .control select:focus + .focus, .control textarea:focus + .focus {
   width: 20em;
+}
+.control input[type=radio], .control input[type=checkbox] {
+  padding: 0;
+  -webkit-appearance: none;
+  width: 100%;
+  border: 0;
+  position: absolute;
+  height: 1em;
+  z-index: 1;
+  top: 0;
+  cursor: pointer;
+}
+.control input[type=radio] + .label, .control input[type=checkbox] + .label {
+  cursor: pointer;
+  margin-right: 1.2em;
+  vertical-align: middle;
+  position: relative;
+}
+.control input[type=radio] + .label:before, .control input[type=radio] + .label:after, .control input[type=checkbox] + .label:before, .control input[type=checkbox] + .label:after {
+  content: ' ';
+  background: transparent;
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  margin: -.1em 1em -.1em 0;
+  -webkit-border-radius: 50%;
+  cursor: pointer;
+  border: 2px solid #757575;
+}
+.control input[type=radio] + .label:after, .control input[type=checkbox] + .label:after {
+  content: '';
+  width: 3em;
+  height: 3em;
+  -webkit-transform: scale(0);
+  -webkit-border-radius: 50%;
+  background: #5264AE;
+  position: absolute;
+  left: -1em;
+  top: -.75em;
+  border: none;
+  transition: all ease 0.1s;
+  opacity: 0;
+  z-index: -1;
+}
+.control input[type=radio]:active + .label:after, .control input[type=checkbox]:active + .label:after {
+  opacity: .25;
+  -webkit-transform: scale(1.2);
+}
+.control input[type=radio]:checked + .label:before, .control input[type=checkbox]:checked + .label:before {
+  background: #5264AE;
+  border: 2px solid #5264AE;
+}
+.control input[type=checkbox] + .label:before {
+  -webkit-border-radius: 0;
+}
+.control input[type=checkbox]:checked + .label:before {
+  content: '';
+  line-height: 15px;
+  color: #5264AE;
+  background: #5264AE;
+  border: 2px solid #5264AE;
+}
+.control select {
+  -webkit-appearance: none;
+  -webkit-border-radius: 0;
+  background: none;
+}
+.control select.unselected {
+  color: darkgray;
 }
 
 /* ----------------------------
