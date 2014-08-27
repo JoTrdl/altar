@@ -3,9 +3,142 @@ extends ../layout/base
 block content
   div.demo
     h1 Grid System
+    h3 Simple Grid
     div.grid.grid-pad
       - for (var i = 1; i <= 12; i++)
         - for (var j = 1; j <= i; j++)
             div(class='col-1-' + i)
               div.column= i
+    br
+    h3 Smart Grid
+    div.container.row
+      .row
+        .columns.one
+          div.column one
+        .columns.one
+          div.column one
+        .columns.one
+          div.column one
+        .columns.one
+          div.column one
+        .columns.one
+          div.column one
+        .columns.one
+          div.column one
+        .columns.one
+          div.column one
+        .columns.one
+          div.column one
+        .columns.one
+          div.column one
+        .columns.one
+          div.column one
+        .columns.one
+          div.column one
+        .columns.one
+          div.column one
+      .row
+        .columns.two
+          div.column two
+        .columns.two
+          div.column two
+        .columns.two
+          div.column two
+        .columns.two
+          div.column two
+        .columns.two
+          div.column two
+        .columns.two
+          div.column two
+      .row
+        .columns.three
+          div.column three
+        .columns.three
+          div.column three
+        .columns.three
+          div.column three
+        .columns.three
+          div.column three
+      .row
+        .columns.one-fourth
+          div.column one-fourth
+        .columns.one-fourth
+          div.column one-fourth
+        .columns.one-half
+          div.column one-half
+      .row
+        .columns.four
+          div.column four
+        .columns.four
+          div.column four
+        .columns.four
+          div.column four
+      .row
+        .columns.one-third
+          div.column one-third
+        .columns.two-thirds
+          div.column two-thirds
+      .row
+        .columns.five
+          div.column five
+        .columns.seven
+          div.column seven
+      .row
+        .columns.six
+          div.column six
+        .columns.six
+          div.column six
+      .row
+        .columns.seven
+          div.column seven
+        .columns.five
+          div.column five
+      .row
+        .columns.eight
+          div.column eight
+        .columns.four
+          div.column four
+      .row
+        .columns.nine
+          div.column nine
+        .columns.three
+          div.column three
+      .row
+        .columns.ten
+          div.column ten
+        .columns.two
+          div.column two
+      .row
+        .columns.eleven
+          div.column eleven
+        .columns.one
+          div.column one
+      .row
+        .columns.two.offset-one
+          div.column two offset-one
+        .columns.eight
+          div.column eight
+      .row
+        .columns.two
+          div.column two
+        .columns.eight
+          div.column eight
+        .columns.two
+          div.column two
+      .row
+        .columns.one-fourth
+          div.column one-fourth
+        .columns.one-half
+          div.column one-half
+        .columns.two.offset-one
+          div.column two offset-one
+      .row
+        .columns.one-half
+          div.column one-half
+        .columns.one-fourth
+          div.column one-fourth
+        .columns.one-fourth
+          div.column one-fourth
+      //
+         end #content 
 
