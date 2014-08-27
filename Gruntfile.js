@@ -57,7 +57,7 @@ module.exports = function (grunt) {
           "universalSelectors": 10,
           "selectors": 4095,
           "selectorsByTag": null,
-          "importants": null,
+          "importants": 10,
           "comments": null,
           "commentsLength": null
         }
