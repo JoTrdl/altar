@@ -5,7 +5,7 @@
 input, select, textarea {
   padding: .5em 0;
   display: block;
-  @include vendor-prefix(box-sizing, border-box);
+  box-sizing: border-box;
 
   width: 20em;
 
@@ -57,8 +57,8 @@ input[type=radio], input[type=checkbox] {
       width: 1em;
       height: 1em;
       margin: -.1em 1em -.1em 0;
-      @include vendor-prefix(border-radius, 50%);
-      @include vendor-prefix(box-sizing, border-box);
+      border-radius: 50%;
+      box-sizing: border-box;
       cursor: pointer;
       border: 2px solid #757575;
     }
@@ -67,8 +67,8 @@ input[type=radio], input[type=checkbox] {
       content: '';
       width: 3em;
       height: 3em;
-      @include vendor-prefix(transform, scale(0));
-      @include vendor-prefix(border-radius, 50%);
+      transform: scale(0);
+      border-radius: 50%;
       background: $focus-color;
       position: absolute;
       left: -1em;
@@ -82,7 +82,7 @@ input[type=radio], input[type=checkbox] {
 
   &:active + .label:after {
     opacity: .25;
-    @include vendor-prefix(transform, scale(1.1));
+    transform: scale(1.1);
   }
 
   &:checked + .label:before {
@@ -93,7 +93,7 @@ input[type=radio], input[type=checkbox] {
 
 input[type=checkbox] {
   & + .label:before { 
-    @include vendor-prefix(border-radius, 0);
+    border-radius: 0;
   }
   &:checked + .label:before {
     content: '';
@@ -109,7 +109,7 @@ input[type=checkbox] {
  * ----------------------------------------------------- */
 select {
   @include vendor-prefix(appearance, none);
-  @include vendor-prefix(border-radius, 0);
+  border-radius: 0;
   background: none;
 
   &.unselected {

@@ -8,8 +8,6 @@
 
 .grid, .grid:after, .grid:before,
 [class*='col-'], [class*='col-']:after, [class*='col-']:before {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 

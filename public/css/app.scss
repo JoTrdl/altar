@@ -37,8 +37,9 @@ $color-gray-lighter: #ddd;
 
 
 /* ----------------------------
- * Mixins
+ * Utils
  * ------------------------------------------------------- */
+@import "components/colors.scss";
 @import "components/mixins.scss";
 
 /* ----------------------------

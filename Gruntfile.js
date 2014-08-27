@@ -36,14 +36,42 @@ module.exports = function (grunt) {
       options: {
         spawn: true
       }
+    },
+    autoprefixer: {
+      prefixe: {
+        options: {
+          browser: ['> 1%', 'last 2 versions', 'Firefox ESR', 'Opera 12.1']
+        },
+        src: 'public/css/app.css',
+        dest: 'public/css/app.css'
+      }
+    },
+    analyzecss: {
+      analyze: {
+        sources: ['public/css/app.css']
+      },
+      options: {
+        outputMetrics: 'error',
+        thresholds: {
+          "complexSelectors": 0,
+          "universalSelectors": 10,
+          "selectors": 4095,
+          "selectorsByTag": null,
+          "importants": null,
+          "comments": null,
+          "commentsLength": null
+        }
+      }
     }
   });
 
   grunt.loadNpmTasks("grunt-contrib-watch");
   grunt.loadNpmTasks("grunt-contrib-sass");
+  grunt.loadNpmTasks('grunt-autoprefixer');
+  grunt.loadNpmTasks("grunt-contrib-analyze-css");
 
-  grunt.registerTask("buildcss", ["sass:dev"]);
-  grunt.registerTask("watchcss", ["watch:sass"]);
+  grunt.registerTask("buildcss", ["sass:dev", "autoprefixer", "analyzecss"]);
+  grunt.registerTask("watchcss", ["watch:sass", "autoprefixer", "analyzecss"]);
   
   grunt.registerTask("default", ["buildcss", "watchcss"]);
 };

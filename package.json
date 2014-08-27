@@ -36,7 +36,9 @@
   "devDependencies": {
     "grunt": "latest",
     "grunt-contrib-watch": "latest",
-    "grunt-contrib-sass": "latest"
+    "grunt-contrib-sass": "latest",
+    "grunt-autoprefixer ": "latest",
+    "grunt-contrib-analyze-css": "latest"
   },
   "engines": {
     "node": ">= 0.10.0"
