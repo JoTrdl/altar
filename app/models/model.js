@@ -3,4 +3,4 @@
 
 exports.model = function() {
   
-}
+};

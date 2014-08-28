@@ -35,6 +35,8 @@
   },
   "devDependencies": {
     "grunt": "latest",
+    "grunt-concurrent ": "latest",
+    "grunt-complexity": "latest",
     "grunt-contrib-watch": "latest",
     "grunt-contrib-sass": "latest",
     "grunt-autoprefixer ": "latest",

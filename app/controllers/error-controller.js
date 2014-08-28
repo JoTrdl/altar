@@ -18,7 +18,7 @@ exports.serverError = function(err, req, res, next) {
     res.render('errors/500', { error: err });
   }
   next(err);
-}
+};
 
 exports.onUncaughtException = function(err) {
   // handle the error safely
