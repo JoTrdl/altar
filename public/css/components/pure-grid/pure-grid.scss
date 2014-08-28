@@ -1,0 +1,10 @@
+
+@import "grids-core.scss";
+@import "grids-units.scss";
+@import "grids-responsive.scss";
+
+.pure-img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
