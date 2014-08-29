@@ -1,0 +1,30 @@
+
+.row {
+
+  $gridColumns: 12;
+
+  &:before, &:after {
+    display: table;
+    content: "";
+    line-height: 0;
+  } 
+
+  &:after { clear: both }
+
+  & > [class^="span"] {
+    display: block;
+    box-sizing: border-box;
+    float: left;
+    padding-right: 1%;
+  }
+  
+  [class^="span"]:nth-last-child(1) {
+    padding-right: 0;
+  }
+
+  @for $i from 1 through $gridColumns {
+    .span#{$i} {
+      width: percentage(1/$i);
+    }
+  }
+}

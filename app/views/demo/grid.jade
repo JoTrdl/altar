@@ -179,4 +179,10 @@ block content
             | Quisque ac magna eget est porta varius ut eget quam. Curabitur tincidunt gravida nisl.
           p
             | Fusce accumsan, sem vitae tempus tempor, nulla lectus interdum felis, eget molestie urna mauris vel elit. Curabitur vel ipsum nulla.
-
+    br
+    h3 Custom Grid
+    - for (var i = 1; i <= 12; i++)
+      .row
+        - for (var j = 1; j <= i; j++)
+          div(class='span' + i)
+            div.column= i

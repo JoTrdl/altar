@@ -2009,6 +2009,61 @@ https://github.com/yui/pure/blob/master/LICENSE.md
   display: block;
 }
 
+.row:before, .row:after {
+  display: table;
+  content: "";
+  line-height: 0;
+}
+.row:after {
+  clear: both;
+}
+.row > [class^="span"] {
+  display: block;
+  -moz-box-sizing: border-box;
+       box-sizing: border-box;
+  float: left;
+  padding-right: 1%;
+}
+.row [class^="span"]:nth-last-child(1) {
+  padding-right: 0;
+}
+.row .span1 {
+  width: 100%;
+}
+.row .span2 {
+  width: 50%;
+}
+.row .span3 {
+  width: 33.33333%;
+}
+.row .span4 {
+  width: 25%;
+}
+.row .span5 {
+  width: 20%;
+}
+.row .span6 {
+  width: 16.66667%;
+}
+.row .span7 {
+  width: 14.28571%;
+}
+.row .span8 {
+  width: 12.5%;
+}
+.row .span9 {
+  width: 11.11111%;
+}
+.row .span10 {
+  width: 10%;
+}
+.row .span11 {
+  width: 9.09091%;
+}
+.row .span12 {
+  width: 8.33333%;
+}
+
 /* -----------------------------
  * Wrapper
  * ----------------------------------------------------- */
@@ -2282,7 +2337,6 @@ html, body {
  * ------------------------------------------------------- */
 .demo .grid {
   border: 1px solid #ddd;
-  text-align: center;
   padding: 10px 0 10px 20px;
   margin: 2em 0;
 }
@@ -2290,4 +2344,5 @@ html, body {
   background: #eee;
   margin: 1em 0;
   border: 1px solid #ccc;
+  text-align: center;
 }
