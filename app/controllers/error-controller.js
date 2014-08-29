@@ -8,7 +8,6 @@ exports.notFound = function(req, res, next) {
   }
 };
 
-
 exports.serverError = function(err, req, res, next) {
   log.error(err);
   if (req.xhr) {

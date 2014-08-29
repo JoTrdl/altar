@@ -2009,6 +2009,9 @@ https://github.com/yui/pure/blob/master/LICENSE.md
   display: block;
 }
 
+/*
+ * Custom grid inspired by Bootstrap.
+ */
 .row:before, .row:after {
   display: table;
   content: "";

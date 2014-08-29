@@ -35,12 +35,14 @@
   },
   "devDependencies": {
     "grunt": "latest",
-    "grunt-concurrent ": "latest",
+    "grunt-concurrent": "latest",
     "grunt-complexity": "latest",
     "grunt-contrib-watch": "latest",
     "grunt-contrib-sass": "latest",
-    "grunt-autoprefixer ": "latest",
-    "grunt-contrib-analyze-css": "latest"
+    "grunt-autoprefixer": "latest",
+    "grunt-contrib-analyze-css": "latest",
+    "load-grunt-config": "latest",
+    "time-grunt": "latest"
   },
   "engines": {
     "node": ">= 0.10.0"
