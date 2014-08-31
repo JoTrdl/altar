@@ -4,7 +4,7 @@
  */
 .row {
 
-  $gridColumns: 12;
+  $gridColumns: 10;
 
   &:before, &:after {
     display: table;
@@ -25,15 +25,24 @@
     padding-right: 0;
   }
 
+  // Create spanX classes
   @for $i from 1 through $gridColumns {
     .span#{$i} {
       width: percentage(1/$i);
     }
   }
 
+  // Create offsetX classes
   @for $i from 1 through $gridColumns {
     .offset#{$i} {
       margin-left: percentage(1/$i);
     }
+  }
+
+  // Image in row are contained in the grid
+  img {
+    max-width: 100%;
+    height: auto;
+    display: block;
   }
 }

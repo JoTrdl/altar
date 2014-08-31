@@ -2060,12 +2060,6 @@ https://github.com/yui/pure/blob/master/LICENSE.md
 .row .span10 {
   width: 10%;
 }
-.row .span11 {
-  width: 9.09091%;
-}
-.row .span12 {
-  width: 8.33333%;
-}
 .row .offset1 {
   margin-left: 100%;
 }
@@ -2096,11 +2090,10 @@ https://github.com/yui/pure/blob/master/LICENSE.md
 .row .offset10 {
   margin-left: 10%;
 }
-.row .offset11 {
-  margin-left: 9.09091%;
-}
-.row .offset12 {
-  margin-left: 8.33333%;
+.row img {
+  max-width: 100%;
+  height: auto;
+  display: block;
 }
 
 /* -----------------------------

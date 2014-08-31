@@ -181,8 +181,14 @@ block content
             | Fusce accumsan, sem vitae tempus tempor, nulla lectus interdum felis, eget molestie urna mauris vel elit. Curabitur vel ipsum nulla.
     br
     h3 Custom Grid
-    - for (var i = 1; i <= 12; i++)
+    - for (var i = 1; i <= 10; i++)
       .row
         - for (var j = 1; j <= i; j++)
           div(class='span' + i)
             div.column= i
+
+    div.row
+      div.span3.offset2
+        div.column
+          | A span3 div with offset2
+
