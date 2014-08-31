@@ -30,4 +30,10 @@
       width: percentage(1/$i);
     }
   }
+
+  @for $i from 1 through $gridColumns {
+    .offset#{$i} {
+      margin-left: percentage(1/$i);
+    }
+  }
 }

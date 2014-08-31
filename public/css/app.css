@@ -2066,6 +2066,42 @@ https://github.com/yui/pure/blob/master/LICENSE.md
 .row .span12 {
   width: 8.33333%;
 }
+.row .offset1 {
+  margin-left: 100%;
+}
+.row .offset2 {
+  margin-left: 50%;
+}
+.row .offset3 {
+  margin-left: 33.33333%;
+}
+.row .offset4 {
+  margin-left: 25%;
+}
+.row .offset5 {
+  margin-left: 20%;
+}
+.row .offset6 {
+  margin-left: 16.66667%;
+}
+.row .offset7 {
+  margin-left: 14.28571%;
+}
+.row .offset8 {
+  margin-left: 12.5%;
+}
+.row .offset9 {
+  margin-left: 11.11111%;
+}
+.row .offset10 {
+  margin-left: 10%;
+}
+.row .offset11 {
+  margin-left: 9.09091%;
+}
+.row .offset12 {
+  margin-left: 8.33333%;
+}
 
 /* -----------------------------
  * Wrapper
