@@ -1,5 +1,10 @@
 
 /* -----------------------------
+ * Variables
+ * ----------------------------------------------------- */
+$border-color: #757575;
+
+/* -----------------------------
  * General inputs
  * ----------------------------------------------------- */
 input, select, textarea {
@@ -13,7 +18,7 @@ input, select, textarea {
   border: 0;
   box-shadow: 0;
 
-  border-bottom: 1px solid #757575;
+  border-bottom: 1px solid $border-color;
   margin-bottom: 1px;
 
   & + .focus {
@@ -60,7 +65,7 @@ input[type=radio], input[type=checkbox] {
       border-radius: 50%;
       box-sizing: border-box;
       cursor: pointer;
-      border: 2px solid #757575;
+      border: 2px solid $border-color;
     }
 
     &:after {
@@ -115,4 +120,5 @@ select {
   &.unselected {
     color: rgb(169, 169, 169);
   }
+
 }

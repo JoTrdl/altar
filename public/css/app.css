@@ -2114,6 +2114,9 @@ https://github.com/yui/pure/blob/master/LICENSE.md
 }
 
 /* -----------------------------
+ * Variables
+ * ----------------------------------------------------- */
+/* -----------------------------
  * General inputs
  * ----------------------------------------------------- */
 input, select, textarea {
@@ -2244,18 +2247,22 @@ button {
   width: 8em;
   text-transform: uppercase;
   color: #fff;
-  background: #4e6cef;
+  background: #5264ae;
   border: 0;
   height: 3em;
   position: relative;
   overflow: hidden;
+}
+button .label {
+  position: relative;
+  z-index: 5;
 }
 button .focus {
   width: 0;
   height: 0;
   top: 50%;
   left: 50%;
-  background: #fff;
+  background: #ccc;
   -webkit-transform: translateX(-50%) translateY(-50%);
       -ms-transform: translateX(-50%) translateY(-50%);
           transform: translateX(-50%) translateY(-50%);
@@ -2264,9 +2271,7 @@ button .focus {
   -webkit-transition: all ease 0.1s;
           transition: all ease 0.1s;
   opacity: 0;
-}
-button:hover {
-  text-shadow: 0px 0px 1px #222;
+  z-index: 0;
 }
 button:hover .focus {
   opacity: .25;
