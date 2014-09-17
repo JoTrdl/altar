@@ -21,16 +21,16 @@ var path = require('path'),
   3 - Requrie ENV/config.js
  */
 
-var config = require(path.resolve('config/app', 'config.json'));
+var config = require('./config.json');
 
 // merge base config with environment config
-var envConfig = require(path.resolve('config/' + process.env.NODE_ENV, 'config.json'));
+var envConfig = require(path.resolve(ROOT, 'app', 'config/' + process.env.NODE_ENV, 'config.json'));
 config = Object.merge(config, envConfig, true);
 
 // properties to be resolved
 var resolveProps = 'models,views,controllers,routes,locales,static,logs'.split(',');
 resolveProps.forEach(function(prop){
-  app.set(prop, path.resolve(config[prop]));
+  app.set(prop, path.resolve(ROOT, config[prop]));
 });
 
 // static properties, everything else
@@ -40,7 +40,7 @@ Object.keys(config, function(prop, value) {
 });
 
 // configure logger
-log = require(path.resolve('lib', 'logger'))({
+log = require(path.resolve(ROOT, 'app', 'utils', 'logger'))({
   directory: app.settings.logs,
   console: (app.settings.environment == 'development')
 });

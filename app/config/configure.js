@@ -1,12 +1,12 @@
 var path = require('path'),
-    requireDir = require(path.resolve('lib', 'requireDir.js'));
+    requireDir = require(path.resolve(ROOT, 'app', 'utils', 'requireDir.js'));
 
 // Starts to require the system config file
-require(path.resolve('config/app', 'config.js'));
+require(path.resolve(ROOT, 'app', 'config/app', 'config.js'));
 
 // Then, requires the environment file
 // If no found, throw an error.
-var envFile = path.resolve('config/' + process.env.NODE_ENV, "config.js");
+var envFile = path.resolve(ROOT, 'app', 'config/' + process.env.NODE_ENV, "config.js");
 try {
   log.info("Configuring environment middleware");
   require(envFile);

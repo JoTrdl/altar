@@ -1,4 +1,6 @@
 
+var path = require('path');
+
 if (!process.env.NODE_ENV)
   process.env.NODE_ENV = 'development';
 
@@ -6,6 +8,7 @@ if (!process.env.NODE_ENV)
 require('sugar');
 express = require('express');
 
+ROOT = path.resolve(__dirname, '..');
 var port = parseInt(process.env.PORT || 8080, 10);
 
 app = module.exports = express();

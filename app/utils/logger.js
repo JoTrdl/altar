@@ -13,7 +13,7 @@ module.exports = function(options) {
   }
 
   var streams = [{
-    level: 'error',
+    level: 'info',
     path: path.resolve(dir, 'app.log')
   }];
 
@@ -34,7 +34,7 @@ module.exports = function(options) {
   });
 
   return log;
-}
+};
 
 
 
