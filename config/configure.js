@@ -1,5 +1,5 @@
 var path = require('path'),
-    requireDir = require('./requireDir');
+    requireDir = require(path.resolve('lib', 'requireDir.js'));
 
 // Starts to require the system config file
 require(path.resolve('config/app', 'config.js'));

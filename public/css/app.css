@@ -2326,7 +2326,7 @@ html, body {
 
 /* ====> End sticky footer */
 .viewport {
-  padding-top: 90px;
+  padding-top: 56px;
 }
 
 .content {
@@ -2337,17 +2337,17 @@ html, body {
 
 .header {
   text-align: center;
-  min-height: 90px;
+  min-height: 56px;
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   display: table;
   z-index: 100;
-  border-bottom: 1px solid #dddddd;
-  background-color: #5264ae;
+  color: #333333;
+  border-bottom: 1px solid #eeeeee;
+  background-color: rgba(255, 255, 255, 0.97);
   border-bottom: 1px solid rgba(0, 0, 0, 0.32);
-  box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.32);
 }
 .header .wrapper {
   display: table-cell;
@@ -2355,7 +2355,6 @@ html, body {
 }
 .header .title {
   font-size: 2em;
-  color: #fff;
 }
 
 .footer {
