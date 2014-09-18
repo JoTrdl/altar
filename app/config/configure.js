@@ -8,7 +8,7 @@ require(path.resolve(ROOT, 'app', 'config/app', 'config.js'));
 // If no found, throw an error.
 var envFile = path.resolve(ROOT, 'app', 'config/' + process.env.NODE_ENV, "config.js");
 try {
-  log.info("Configuring environment middleware");
+  log.info("Configuring environment [" + process.env.NODE_ENV + "] middleware");
   require(envFile);
 } catch(e) {
   log.error("Error when requiring environment [" + process.env.NODE_ENV + "]", e);

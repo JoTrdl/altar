@@ -45,8 +45,6 @@ log = require(path.resolve(ROOT, 'app', 'utils', 'logger'))({
   console: (app.settings.environment == 'development')
 });
 
-log.info('Config file loaded for [%s]', app.settings.environment);
-
 log.info('Configuring system middleware');
 app.use( require('body-parser').urlencoded({ extended: true }) );
 app.use( require('body-parser').json() );
@@ -83,8 +81,8 @@ app.locals = {
   moment: require('moment')
 };
 
-// TODO: better config
-// Inititalize a socket server
-var server = require('http').Server(app);
-app.io = require('socket.io')(server);
-app.io.router = require('socket.io-events')();
+if (config.socket) {
+  log.info('Configuring socket.io server');
+  require('./socket.js');
+}
+

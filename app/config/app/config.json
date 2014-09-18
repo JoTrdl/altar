@@ -23,5 +23,7 @@
   "i18n": {
     "locales": ["en", "fr"],
     "updateFiles": false
-  }
+  },
+
+  "socket": true
 }
