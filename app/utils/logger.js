@@ -7,6 +7,7 @@ var fs = require('fs'),
 module.exports = function(options) {
 
   var dir = options && options.directory || path.resolve('logs');
+  var logname = options && options.logname || 'app.log';
 
   if (!fs.existsSync(dir)) {
     fs.mkdirSync(dir, 0775);
@@ -14,7 +15,7 @@ module.exports = function(options) {
 
   var streams = [{
     level: 'info',
-    path: path.resolve(dir, 'app.log')
+    path: path.resolve(dir, logname)
   }];
 
   if (options && options.console) {
