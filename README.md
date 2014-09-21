@@ -1,15 +1,9 @@
-NoApp
+Altar
 ========
 
 A Full Stack App Template.
 
-Backend:
-
-A Node.js/Express server supporting web rendering / REST API / Websocket.
-
-Frontend:
-
-TBD.
+This readme file is not up to date.
 
 
 Folder structure
