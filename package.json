@@ -39,7 +39,7 @@
     "grunt-concurrent": "latest",
     "grunt-complexity": "latest",
     "grunt-contrib-watch": "latest",
-    "grunt-contrib-sass": "latest",
+    "grunt-sass": "latest",
     "grunt-autoprefixer": "latest",
     "grunt-contrib-analyze-css": "latest",
     "load-grunt-config": "latest",
