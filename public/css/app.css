@@ -2326,7 +2326,7 @@ html, body {
 
 /* ====> End sticky footer */
 .viewport {
-  padding-top: 56px;
+  padding-top: 200px;
 }
 
 .content {
@@ -2335,9 +2335,13 @@ html, body {
   max-width: 720px;
 }
 
+/*
+ Inspiration
+ https://github.com/jasoncostello/slate
+ */
 .header {
   text-align: center;
-  min-height: 56px;
+  min-height: 200px;
   position: fixed;
   top: 0;
   left: 0;
@@ -2346,15 +2350,31 @@ html, body {
   z-index: 100;
   color: #333333;
   border-bottom: 1px solid #eeeeee;
-  background-color: rgba(255, 255, 255, 0.97);
+  background: -webkit-linear-gradient(top, #373737, #212121);
+  background: linear-gradient(top, #373737, #212121);
   border-bottom: 1px solid rgba(0, 0, 0, 0.32);
 }
 .header .wrapper {
   display: table-cell;
   vertical-align: middle;
 }
+.header .title, .header .subtitle {
+  font-family: 'Lucida Grande', 'Calibri', Helvetica, Arial, sans-serif;
+  color: #fff;
+  text-align: left;
+  max-width: 720px;
+  margin: 10px auto;
+  text-shadow: #111111 0px 0px 10px;
+  letter-spacing: -1px;
+  -webkit-font-smoothing: antialiased;
+}
 .header .title {
-  font-size: 2em;
+  font-weight: 700;
+  font-size: 42px;
+}
+.header .subtitle {
+  font-weight: 300;
+  font-size: 24px;
 }
 
 .footer {
