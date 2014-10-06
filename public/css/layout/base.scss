@@ -2,10 +2,11 @@
 html, body {
   padding: 0;
   margin: 0;
+  position: relative;
 }
 html {
   -webkit-tap-highlight-color: rgba(0,0,0,0);
-  overflow: hidden;
+  overflow-x: hidden;
 }
 body {
   width: 100%;
@@ -26,6 +27,7 @@ html, body {
   height: auto !important;
   height: 100%;
   margin: 0 auto -120px; /* the bottom margin is the negative value of the footer's height */
+  position: relative;
 }
 .footer, .push {
   height: 120px; /* '.push' must be the same height as 'footer' */

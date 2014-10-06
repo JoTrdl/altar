@@ -1,4 +1,16 @@
-div.header
+div.header(data-threshold-small=70)
   div.wrapper
     h1.title #{title}
     h2.subtitle [Full Stack App Template]
+
+script.
+  $(function() {
+    var $viewport = $('.viewport');
+    var $header = $('.header');
+    var threhold = $header.data('threshold-small') || 70;
+    $('body').scroll(function() {
+      var top = $viewport.offset().top;
+      if (top <= -threhold) $header.addClass('small');
+      else $header.removeClass('small');
+    });
+  });
