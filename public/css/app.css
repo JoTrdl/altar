@@ -1482,12 +1482,12 @@ html, body {
   min-height: 100%;
   height: auto !important;
   height: 100%;
-  margin: 0 auto -120px;
+  margin: 0 auto -150px;
   /* the bottom margin is the negative value of the footer's height */
   position: relative; }
 
 .footer, .push {
-  height: 120px;
+  height: 150px;
   /* '.push' must be the same height as 'footer' */ }
 
 /* ====> End sticky footer */
@@ -1515,11 +1515,12 @@ html, body {
   z-index: 100;
   color: #333333;
   border-bottom: 1px solid #eee;
-  background: -webkit-linear-gradient(top, #373737, #212121);
-  background: linear-gradient(top, #373737, #212121);
-  border-bottom: 1px solid rgba(0, 0, 0, 0.32);
-  -webkit-transition: height 0.2s cubic-bezier(0.5, 0.32, 0.5, 0.68);
-          transition: height 0.2s cubic-bezier(0.5, 0.32, 0.5, 0.68); }
+  background-color: #3B2F63;
+  background-image: -webkit-radial-gradient(at 50% top, rgba(84, 90, 182, 0.6) 0%, rgba(84, 90, 182, 0) 75%), -webkit-radial-gradient(at right top, #794aa2 0%, rgba(121, 74, 162, 0) 57%);
+  background-image: radial-gradient(at 50% top, rgba(84, 90, 182, 0.6) 0%, rgba(84, 90, 182, 0) 75%), radial-gradient(at right top, #794aa2 0%, rgba(121, 74, 162, 0) 57%);
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.15);
+  -webkit-transition: all 0.3s ease;
+          transition: all 0.3s ease; }
   .header.small {
     background: rgba(255, 255, 255, 0.95);
     height: 30px; }
@@ -1538,6 +1539,8 @@ html, body {
     display: table-cell;
     vertical-align: middle; }
   .header .title, .header .subtitle {
+    -webkit-transition: all 0.3s ease;
+            transition: all 0.3s ease;
     font-family: 'Lucida Grande', 'Calibri', Helvetica, Arial, sans-serif;
     color: #fff;
     text-align: left;
@@ -1555,10 +1558,12 @@ html, body {
 
 .footer {
   background-color: #b0bec5;
-  color: #777676;
   text-align: center;
   position: relative;
-  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.5); }
+  background: #f0f0f0;
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.15) inset;
+  margin-top: 60px;
+  color: #999; }
   .footer p {
     margin: 0; }
 

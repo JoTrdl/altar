@@ -26,11 +26,11 @@ html, body {
   min-height: 100%;
   height: auto !important;
   height: 100%;
-  margin: 0 auto -120px; /* the bottom margin is the negative value of the footer's height */
+  margin: 0 auto -150px; /* the bottom margin is the negative value of the footer's height */
   position: relative;
 }
 .footer, .push {
-  height: 120px; /* '.push' must be the same height as 'footer' */
+  height: 150px; /* '.push' must be the same height as 'footer' */
 }
 /* ====> End sticky footer */
 

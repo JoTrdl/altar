@@ -1,11 +1,15 @@
 
 .footer {
   background-color: #b0bec5;
-  color: #777676;
   text-align: center;
   position: relative;
   
-  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.5);
+  background: #f0f0f0;
+  box-shadow: 0 1px 1px 0 rgba(0,0,0,0.15) inset;
 
+  margin-top: 60px;
+
+  color: #999;
+  
   p { margin: 0 ;}
 }

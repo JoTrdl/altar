@@ -1,5 +1,5 @@
 {
-  "name": "altar",
+  "name": "altarjs",
   "description": "A Full Stack App Template",
   "version": "0.1.0",
   "author": "Johann Troendle",
@@ -12,7 +12,10 @@
     "restful",
     "websoket"
   ],
-  "repository": "JoTrdl/noapp",
+  "repository": { 
+    "type" : "git", 
+    "url" : "https://github.com/JoTrdl/altar.git"
+  },
   "license": "MIT",
   "dependencies": {
     "sugar": "1.x.x",
