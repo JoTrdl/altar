@@ -32,3 +32,6 @@ node_modules
 
 # Mac OS
 .DS_Store
+
+# Bower directory
+public/vendor

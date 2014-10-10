@@ -7,9 +7,12 @@ html(lang="en")
     block head
       title= (typeof(title) == 'undefined' ? "App" : title)
 
+    link(rel="stylesheet", href="/css/app.css", type="text/css")
+    link(rel="stylesheet", href="/vendor/fontawesome/css/font-awesome.min.css", type="text/css")
+
     block css
-      link(rel="stylesheet", href="/css/app.css", type="text/css")
-        
+      
+    
     //- If dev env, add script to autoreload page when scss change
     if environment == 'development'
       script(src="//localhost:35729/livereload.js")

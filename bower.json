@@ -1,0 +1,19 @@
+{
+  "name": "Altar JS",
+  "version": "0.1.0",
+  "homepage": "https://github.com/JoTrdl/altar",
+  "author": "Johann Troendle",
+  "moduleType": [
+    "node"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "app/bower_components"
+  ],
+  "dependencies": {
+    "fontawesome": "latest"
+  }
+}

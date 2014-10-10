@@ -2,8 +2,11 @@
 - var year = moment().format('YYYY');
 
 div.footer
-  p
+  p.copy
     | Copyright &copy; #{year}
+
+  p.love
+    | Crafted with <i class="fa fa-heart"></i>
 
   if environment != 'production'
     p(style="position:absolute; right:5px; bottom: 5px;")
