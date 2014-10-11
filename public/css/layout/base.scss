@@ -2,7 +2,6 @@
 html, body {
   padding: 0;
   margin: 0;
-  position: relative;
 }
 html {
   -webkit-tap-highlight-color: rgba(0,0,0,0);
@@ -19,27 +18,26 @@ body {
 
 
 /* <===== Start sticky footer */
-html, body {
-  height: 100%;
-}
-.wrapper {
-  min-height: 100%;
-  height: auto !important;
-  height: 100%;
-  margin: 0 auto -150px; /* the bottom margin is the negative value of the footer's height */
+html {
   position: relative;
+  min-height: 100%;
 }
-.footer, .push {
-  height: 150px; /* '.push' must be the same height as 'footer' */
+body {
+  margin: 0 0 100px; /* bottom = footer height */
+}
+
+.footer {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 100px;
+  width: 100%;
 }
 /* ====> End sticky footer */
 
 
-.viewport {
-  padding-top: $header-height;
-}
-
 .content {
+  padding-top: $header-height;
   width: 90%;
   margin: 0 auto;
   max-width: 720px;

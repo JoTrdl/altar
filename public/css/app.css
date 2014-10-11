@@ -1460,8 +1460,7 @@ button {
 /* html, body base */
 html, body {
   padding: 0;
-  margin: 0;
-  position: relative; }
+  margin: 0; }
 
 html {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
@@ -1475,26 +1474,24 @@ body {
   color: #111; }
 
 /* <===== Start sticky footer */
-html, body {
-  height: 100%; }
+html {
+  position: relative;
+  min-height: 100%; }
 
-.wrapper {
-  min-height: 100%;
-  height: auto !important;
-  height: 100%;
-  margin: 0 auto -150px;
-  /* the bottom margin is the negative value of the footer's height */
-  position: relative; }
+body {
+  margin: 0 0 100px;
+  /* bottom = footer height */ }
 
-.footer, .push {
-  height: 150px;
-  /* '.push' must be the same height as 'footer' */ }
+.footer {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 100px;
+  width: 100%; }
 
 /* ====> End sticky footer */
-.viewport {
-  padding-top: 200px; }
-
 .content {
+  padding-top: 200px;
   width: 90%;
   margin: 0 auto;
   max-width: 720px; }
@@ -1559,10 +1556,8 @@ html, body {
 .footer {
   background-color: #b0bec5;
   text-align: center;
-  position: relative;
   background: #f0f0f0;
   box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.15) inset;
-  margin-top: 60px;
   color: #999; }
   .footer p {
     margin: 0; }
