@@ -360,6 +360,8 @@ td, th {
  * Custom grid inspired by Bootstrap.
  */
 .row {
+  position: relative;
+  width: 100%;
   /*
    * Starting medium, span are sized.
    */
