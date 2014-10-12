@@ -3,6 +3,7 @@ html(lang="en")
   head
     block meta
       meta(http-equiv='Content-Type', content='text/html; charset=UTF-8')
+      meta(name='viewport', content='width=device-width, user-scalable=no')
 
     block head
       title= (typeof(title) == 'undefined' ? "App" : title)
@@ -17,7 +18,7 @@ html(lang="en")
     if environment == 'development'
       script(src="//localhost:35729/livereload.js")
 
-    script(src="//code.jquery.com/jquery-2.1.1.min.js")
+    script(src="/vendor/jQuery/dist/jquery.min.js")
 
     block scripts
       

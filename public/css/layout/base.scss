@@ -23,7 +23,7 @@ html {
   min-height: 100%;
 }
 body {
-  margin: 0 0 100px; /* bottom = footer height */
+  margin: 0 0 150px; /* bottom = footer height  + space */
 }
 
 .footer {
@@ -37,8 +37,10 @@ body {
 
 
 .content {
-  padding-top: $header-height;
+  //padding-top: $header-height;
   width: 90%;
   margin: 0 auto;
   max-width: 720px;
 }
+
+

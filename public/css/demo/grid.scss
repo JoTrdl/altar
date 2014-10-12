@@ -9,6 +9,11 @@
     background: #eee;
     margin: 1em 0;
     border: 1px solid #ccc;
+    border-left: none;
     text-align: center;
+  }
+
+  [class^="span"]:first-child {
+    .column { border-left: 1px solid #ccc; }
   }
 }
