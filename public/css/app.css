@@ -778,10 +778,10 @@ body {
     font-size: 24px; }
 
 .footer {
-  background-color: #b0bec5;
+  background-color: #FAFAFA;
   text-align: center;
-  background: -webkit-linear-gradient(top, #ffffff 0%, #f0f0f0 25%);
-  background: linear-gradient(to bottom, #ffffff 0%, #f0f0f0 25%);
+  background: -webkit-linear-gradient(top, #ffffff 0%, #FAFAFA 25%);
+  background: linear-gradient(to bottom, #ffffff 0%, #FAFAFA 25%);
   height: 75px;
   padding-top: 25px;
   margin-top: 25px;
