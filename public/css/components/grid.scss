@@ -8,13 +8,13 @@
 
   $screen-small-min: "320px";
   $screen-medium-min: "480px";
-  $screen-large-min: "1024px";
+  $screen-large-min: "920px";
 
-  $screen-small-mq: "(min-width: #{$screen-small-min}) and (max-width : 480px)";
-  $screen-medium-mq: "(min-width: #{$screen-medium-min}) and (max-width : 1024px)";
+  $screen-small-mq: "(min-width: #{$screen-small-min}) and (max-width : #{$screen-medium-min})";
+  $screen-medium-mq: "(min-width: #{$screen-medium-min}) and (max-width : #{$screen-large-min})";
   $screen-large-mq: "(min-width: #{$screen-large-min})";
 
-  
+
   position: relative;
   width: 100%;
 
@@ -91,5 +91,9 @@
     max-width: 100%;
     height: auto;
     display: block;
+  }
+
+  &.animate > [class^="span"] {
+    transition: all 0.3s ease;
   }
 }

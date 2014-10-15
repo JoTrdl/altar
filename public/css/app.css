@@ -464,7 +464,7 @@ td, th {
       margin-left: 90%; }
     .row .offset10 {
       margin-left: 100%; } }
-  @media (min-width: 480px) and (max-width : 1024px) {
+  @media (min-width: 480px) and (max-width : 920px) {
     .row .md-span1 {
       width: 100%; }
     .row .md-span2 {
@@ -511,6 +511,9 @@ td, th {
     max-width: 100%;
     height: auto;
     display: block; }
+  .row.animate > [class^="span"] {
+    -webkit-transition: all 0.3s ease;
+            transition: all 0.3s ease; }
 
 /* -----------------------------
  * Wrapper
@@ -742,7 +745,8 @@ body {
   box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.15); }
   .header.small {
     position: fixed;
-    background: rgba(255, 255, 255, 0.95);
+    background-color: rgba(255, 255, 255, 0.95);
+    background-image: none;
     height: 55px;
     top: 0; }
     .header.small .title, .header.small .subtitle {

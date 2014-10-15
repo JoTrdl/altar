@@ -15,6 +15,11 @@ app.get('/demo/:type', controllers.web.demoController.doGet);
 app.get('/admin', loginRequired(true), controllers.web.adminController.doGet);
 
 
+// testing error 500
+app.get('/error', function() {
+  throw new Error('test')
+});
+
 /*
  * Not found handler.
  */

@@ -1,7 +1,14 @@
 extends ../layout/base
 
+block scripts
+  script(src="/vendor/physicsjs/dist/physicsjs-0.6.0.min.js")
+  script(src="/js/breaker.js")
+
 block content
   p
     | Error 500.
   //- http://mrdoob.com/projects/chromeexperiments/google-gravity/
   pre #{error}
+
+  script.
+    window.breaker();
