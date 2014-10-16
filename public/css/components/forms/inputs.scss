@@ -2,7 +2,7 @@
 /* -----------------------------
  * Variables
  * ----------------------------------------------------- */
-$border-color: #757575;
+$border-color: #E2E2E2;
 
 /* -----------------------------
  * General inputs
@@ -23,7 +23,7 @@ input, select, textarea {
 
   & + .focus {
     background: $focus-color;
-    height: 2px;
+    height: 1px;
     width: 0;
     position: absolute;
     bottom: 0;
