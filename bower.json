@@ -15,7 +15,6 @@
   ],
   "dependencies": {
     "jQuery": "2.x.x",
-    "fontawesome": "latest",
-    "physicsjs": "~0.6.0"
+    "fontawesome": "latest"
   }
 }

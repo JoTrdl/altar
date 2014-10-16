@@ -1,17 +1,21 @@
 
-.footer {
+/*
+ * Variables
+ */
+$footer-background-color: #FAFAFA;
 
-  $footer-background-color: #FAFAFA;
+.footer {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: $footer-height;
+  
+  text-align: center;
 
   background-color: $footer-background-color;
-  text-align: center;
-  
- // background: #f0f0f0;
- // box-shadow: 0 1px 1px 0 rgba(0,0,0,0.15) inset;
-
   background: linear-gradient(to bottom, #ffffff 0%, $footer-background-color 25%);
 
-  height : 75px;
   padding-top: 25px;
   margin-top: 25px;
 

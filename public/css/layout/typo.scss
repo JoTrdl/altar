@@ -1,0 +1,34 @@
+/* ----------------------------
+ * Variables
+ * ------------------------------------------------------- */
+$body-font-style: normal;
+$body-font-variant: normal;
+$body-font-weight: 400;
+$body-font-size: 13px;
+$body-line-height: 175%;
+$body-font-family: "Helvetica Neue", Helvetica, arial, sans-serif;
+$body-color: #111;
+
+p {
+  font-size: 1em;
+  line-height: 1.75em;
+}
+
+h1,h2,h3,h4,h5,h6 {
+  font-family: "Lucida Grande", "Helvetica Neue", Helvetica, arial, sans-serif;
+  font-weight: 400;
+  line-height: 1em;
+  margin:  1em 0;
+  letter-spacing: -1px;
+}
+
+h1 { font-size: 2.25em; }
+h2 { font-size: 2em; }
+h3 { font-size: 1.75em; }
+h4 { font-size: 1.5em; }
+h5 { font-size: 1.25em; }
+h6 { font-size: 1em; }
+
+$color-gray: #555;
+$color-gray-light: #999;
+$color-gray-lighter: #eee;

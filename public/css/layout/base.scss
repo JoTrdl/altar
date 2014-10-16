@@ -1,45 +1,43 @@
-/* html, body base */
+
+/*
+ * Layout variables
+ */
+$header-height: 200px;
+$footer-height: 75px;
+
+/*
+ * html, body base
+ */
 html, body {
   padding: 0;
   margin: 0;
+  overflow-x: hidden;
 }
 html {
   -webkit-tap-highlight-color: rgba(0,0,0,0);
-  overflow-x: hidden;
 }
 body {
   width: 100%;
-  overflow-x: hidden;
-
   background-color: #fff;
   font: $body-font-style $body-font-variant $body-font-weight #{$body-font-size}/#{$body-line-height} $body-font-family;
   color: $body-color;
 }
 
-//http://www.fontsquirrel.com/fonts/caviar-dreams
-
-
-/* <===== Start sticky footer */
+/*
+ * Sticky footer stuff 
+ */
 html {
   position: relative;
   min-height: 100%;
 }
 body {
-  margin: 0 0 150px; /* bottom = footer height  + space */
+  margin: 0 0 $footer-height+50px; /* bottom = footer height + space */
 }
 
-.footer {
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  height: 100px;
-  width: 100%;
-}
-/* ====> End sticky footer */
-
-
+/*
+ * Content
+ */
 .content {
-  //padding-top: $header-height;
   width: 90%;
   margin: 0 auto;
   max-width: 720px;

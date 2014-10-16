@@ -7,9 +7,11 @@ script.
   $(function() {
     var $header = $('.header');
     var threhold = $header.data('threshold-small') || 1;
-    $(document).scroll(function() {
-      var top = $(document).scrollTop();
+    var $doc = $(document);
+
+    $doc.scroll(function() {
+      var top = $doc.scrollTop();
       if (top >= threhold) $header.addClass('small');
-      else $header.removeClass('small');
+      else if (top <= 1) $header.removeClass('small');
     });
   });
