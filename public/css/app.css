@@ -717,16 +717,39 @@ button {
     height: 200%;
     border-radius: 0%; }
 
+.text-left {
+  text-align: left; }
+
+.text-right {
+  text-align: right; }
+
+.text-center {
+  text-align: center; }
+
+.text-justify {
+  text-align: justify; }
+
 /* ----------------------------
  * Layouts
  * ------------------------------------------------------- */
 /* ----------------------------
  * Variables
  * ------------------------------------------------------- */
+/* ----------------------------------------
+ * Paragraphs
+ * ------------------------------------------------------------------- */
 p {
   font-size: 1em;
-  line-height: 1.75em; }
+  line-height: 1.75em;
+  margin: 12px 0; }
+  p.lead {
+    font-size: 1.5em;
+    line-height: 1.5em;
+    font-weight: 300; }
 
+/* ----------------------------------------
+ * Headings
+ * ------------------------------------------------------------------- */
 h1, h2, h3, h4, h5, h6 {
   font-family: "Lucida Grande", "Helvetica Neue", Helvetica, arial, sans-serif;
   font-weight: 400;
@@ -751,6 +774,26 @@ h5 {
 
 h6 {
   font-size: 1em; }
+
+/* ----------------------------------------
+ * Pre
+ * ------------------------------------------------------------------- */
+pre {
+  font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
+  background: rgba(128, 128, 128, 0.15);
+  padding: 5px 10px; }
+  pre .nt {
+    color: #2f6f9f; }
+
+/* ----------------------------------------
+ * Horizontal line
+ * ------------------------------------------------------------------- */
+hr {
+  border: 0;
+  height: 1px;
+  position: relative;
+  background: -webkit-radial-gradient(center, ellipse, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0) 75%);
+  background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0) 75%); }
 
 /*
  * Layout variables

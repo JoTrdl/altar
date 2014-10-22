@@ -9,11 +9,24 @@ $body-line-height: 175%;
 $body-font-family: "Helvetica Neue", Helvetica, arial, sans-serif;
 $body-color: #111;
 
+/* ----------------------------------------
+ * Paragraphs
+ * ------------------------------------------------------------------- */
 p {
   font-size: 1em;
   line-height: 1.75em;
+  margin: 12px 0;
+
+  &.lead {
+    font-size: 1.5em;
+    line-height: 1.5em;
+    font-weight: 300;
+  }
 }
 
+/* ----------------------------------------
+ * Headings
+ * ------------------------------------------------------------------- */
 h1,h2,h3,h4,h5,h6 {
   font-family: "Lucida Grande", "Helvetica Neue", Helvetica, arial, sans-serif;
   font-weight: 400;
@@ -28,6 +41,29 @@ h3 { font-size: 1.75em; }
 h4 { font-size: 1.5em; }
 h5 { font-size: 1.25em; }
 h6 { font-size: 1em; }
+
+/* ----------------------------------------
+ * Pre
+ * ------------------------------------------------------------------- */
+pre {
+  font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
+  background: rgba(128, 128, 128, 0.15);
+  padding: 5px 10px;
+  .nt {
+    color: #2f6f9f;
+  }
+}
+
+/* ----------------------------------------
+ * Horizontal line
+ * ------------------------------------------------------------------- */
+hr {
+  border: 0;
+  height: 1px;
+  position: relative;
+
+  background: radial-gradient(ellipse at center, rgba(0,0,0,0.2) 0%,rgba(0,0,0,0) 75%);
+}
 
 $color-gray: #555;
 $color-gray-light: #999;
