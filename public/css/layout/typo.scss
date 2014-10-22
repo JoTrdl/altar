@@ -3,11 +3,21 @@
  * ------------------------------------------------------- */
 $body-font-style: normal;
 $body-font-variant: normal;
-$body-font-weight: 400;
-$body-font-size: 13px;
+$body-font-weight: 300;
+$body-font-size: 18px;
 $body-line-height: 175%;
 $body-font-family: "Helvetica Neue", Helvetica, arial, sans-serif;
 $body-color: #111;
+
+/* ----------------------------------------
+ * Body
+ * ------------------------------------------------------------------- */
+body {
+  width: 100%;
+  background-color: #fff;
+  font: $body-font-style $body-font-variant $body-font-weight #{$body-font-size}/#{$body-line-height} $body-font-family;
+  color: $body-color;
+}
 
 /* ----------------------------------------
  * Paragraphs

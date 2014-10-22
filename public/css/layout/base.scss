@@ -16,12 +16,6 @@ html, body {
 html {
   -webkit-tap-highlight-color: rgba(0,0,0,0);
 }
-body {
-  width: 100%;
-  background-color: #fff;
-  font: $body-font-style $body-font-variant $body-font-weight #{$body-font-size}/#{$body-line-height} $body-font-family;
-  color: $body-color;
-}
 
 /*
  * Sticky footer stuff 
@@ -40,7 +34,7 @@ body {
 .content {
   width: 90%;
   margin: 0 auto;
-  max-width: 720px;
+  max-width: 840px;;
 }
 
 
