@@ -155,7 +155,6 @@ figure {
  * Address differences between Firefox and other browsers.
  */
 hr {
-  -moz-box-sizing: content-box;
   box-sizing: content-box;
   height: 0; }
 
@@ -248,8 +247,7 @@ input {
  * 2. Remove excess padding in IE 8/9/10.
  */
 input[type="checkbox"], input[type="radio"] {
-  -moz-box-sizing: border-box;
-       box-sizing: border-box;
+  box-sizing: border-box;
   /* 1 */
   padding: 0;
   /* 2 */ }
@@ -270,7 +268,6 @@ input[type="number"]::-webkit-inner-spin-button, input[type="number"]::-webkit-o
 input[type="search"] {
   -webkit-appearance: textfield;
   /* 1 */
-  -moz-box-sizing: content-box;
   /* 2 */
   box-sizing: content-box; }
 
@@ -345,8 +342,7 @@ td, th {
     clear: both; }
   .row > [class^="span"] {
     display: block;
-    -moz-box-sizing: border-box;
-         box-sizing: border-box;
+    box-sizing: border-box;
     float: left;
     min-height: 1px; }
   .row .span1 {
@@ -402,103 +398,152 @@ td, th {
   @media (min-width: 480px) {
     .row .span1 {
       width: 100%; }
+
     .row .span2 {
       width: 50%; }
+
     .row .span3 {
       width: 33.3333333333%; }
+
     .row .span4 {
       width: 25%; }
+
     .row .span5 {
       width: 20%; }
+
     .row .span6 {
       width: 16.6666666667%; }
+
     .row .span7 {
       width: 14.2857142857%; }
+
     .row .span8 {
       width: 12.5%; }
+
     .row .span9 {
       width: 11.1111111111%; }
+
     .row .span10 {
       width: 10%; }
+
     .row .span11 {
       width: 9.0909090909%; }
+
     .row .span12 {
       width: 8.3333333333%; }
+
     .row .offset1 {
       margin-left: 8.3333333333%; }
+
     .row .offset2 {
       margin-left: 16.6666666667%; }
+
     .row .offset3 {
       margin-left: 25%; }
+
     .row .offset4 {
       margin-left: 33.3333333333%; }
+
     .row .offset5 {
       margin-left: 41.6666666667%; }
+
     .row .offset6 {
       margin-left: 50%; }
+
     .row .offset7 {
       margin-left: 58.3333333333%; }
+
     .row .offset8 {
       margin-left: 66.6666666667%; }
+
     .row .offset9 {
       margin-left: 75%; }
+
     .row .offset10 {
       margin-left: 83.3333333333%; }
+
     .row .offset11 {
       margin-left: 91.6666666667%; }
+
     .row .offset12 {
-      margin-left: 100%; } }
+      margin-left: 100%; }
+ }
   @media (min-width: 480px) and (max-width : 920px) {
     .row .md-span1 {
       width: 100%; }
+
     .row .md-span2 {
       width: 50%; }
+
     .row .md-span3 {
       width: 33.3333333333%; }
+
     .row .md-span4 {
       width: 25%; }
+
     .row .md-span5 {
       width: 20%; }
+
     .row .md-span6 {
       width: 16.6666666667%; }
+
     .row .md-span7 {
       width: 14.2857142857%; }
+
     .row .md-span8 {
       width: 12.5%; }
+
     .row .md-span9 {
       width: 11.1111111111%; }
+
     .row .md-span10 {
       width: 10%; }
+
     .row .md-span11 {
       width: 9.0909090909%; }
+
     .row .md-span12 {
       width: 8.3333333333%; }
+
     .row .md-offset1 {
       margin-left: 8.3333333333%; }
+
     .row .md-offset2 {
       margin-left: 16.6666666667%; }
+
     .row .md-offset3 {
       margin-left: 25%; }
+
     .row .md-offset4 {
       margin-left: 33.3333333333%; }
+
     .row .md-offset5 {
       margin-left: 41.6666666667%; }
+
     .row .md-offset6 {
       margin-left: 50%; }
+
     .row .md-offset7 {
       margin-left: 58.3333333333%; }
+
     .row .md-offset8 {
       margin-left: 66.6666666667%; }
+
     .row .md-offset9 {
       margin-left: 75%; }
+
     .row .md-offset10 {
       margin-left: 83.3333333333%; }
+
     .row .md-offset11 {
       margin-left: 91.6666666667%; }
+
     .row .md-offset12 {
       margin-left: 100%; }
+
     .row .md-offset0 {
-      margin-left: 0; } }
+      margin-left: 0; }
+ }
   .row img {
     max-width: 100%;
     height: auto;
@@ -530,8 +575,7 @@ td, th {
 input, select, textarea {
   padding: 0.5em 0;
   display: block;
-  -moz-box-sizing: border-box;
-       box-sizing: border-box;
+  box-sizing: border-box;
   width: 20em;
   outline: 0;
   border: 0;
@@ -581,8 +625,7 @@ input[type=radio], input[type=checkbox] {
       height: 1em;
       margin: -0.1em 1em -0.1em 0;
       border-radius: 50%;
-      -moz-box-sizing: border-box;
-           box-sizing: border-box;
+      box-sizing: border-box;
       cursor: pointer;
       border: 2px solid #E2E2E2; }
     input[type=radio] + .label:after, input[type=checkbox] + .label:after {
@@ -632,7 +675,7 @@ select {
   border-radius: 0;
   background: none; }
   select.unselected {
-    color: darkgrey; }
+    color: darkgray; }
 
 /* -----------------------------
  * Buttons
@@ -816,9 +859,9 @@ body {
   width: 100%;
   height: 75px;
   text-align: center;
-  background-color: #FAFAFA;
-  background: -webkit-linear-gradient(top, #ffffff 0%, #FAFAFA 25%);
-  background: linear-gradient(to bottom, #ffffff 0%, #FAFAFA 25%);
+  background-color: #f3f3f3;
+  background: -webkit-linear-gradient(top, #ffffff 0%, #f3f3f3 25%);
+  background: linear-gradient(to bottom, #ffffff 0%, #f3f3f3 25%);
   padding-top: 25px;
   margin-top: 25px;
   color: #888;
