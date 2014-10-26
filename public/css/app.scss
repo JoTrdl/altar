@@ -1,5 +1,54 @@
 
 /* ----------------------------
+ * Variables
+ * ------------------------------------------------------- */
+// Body
+$body-font-style: normal;
+$body-font-variant: normal;
+$body-font-weight: 300;
+$body-font-size: 18px;
+$body-line-height: 175%;
+$body-font-family: "Helvetica Neue", Helvetica, arial, sans-serif;
+$body-color: #304650;
+
+// Font bold
+$bold-font-weight: 500;
+
+// Monospace font
+$monospace-font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
+
+// Heading font 
+$heading-font-family: "Lucida Grande", "Helvetica Neue", Helvetica, arial, sans-serif;
+$heading-font-weight: 400;
+$heading-line-height: 1em;
+$heading-letter-spacing: -1px;
+$heading-margin: 1em 0;
+
+// Spacing
+$space-1: .5em;
+$space-2:  1em;
+$space-3:  2em;
+$space-4:  4em;
+
+// Breakpoints
+$screen-small-min: "320px";
+$screen-medium-min: "480px";
+$screen-large-min: "920px";
+
+$breakpoint-sm: "(min-width: #{$screen-small-min}) and (max-width : #{$screen-medium-min})";
+$breakpoint-md: "(min-width: #{$screen-medium-min}) and (max-width : #{$screen-large-min})";
+$breakpoint-lg: "(min-width: #{$screen-large-min})";
+ 
+
+
+
+
+/* ----------------------------
+ * Base style
+ * ------------------------------------------------------- */
+@import "basscss/basscss.scss";
+
+/* ----------------------------
  * Utils
  * ------------------------------------------------------- */
 @import "components/colors.scss";
@@ -8,10 +57,8 @@
 /* ----------------------------
  * Components
  * ------------------------------------------------------- */
-@import "components/normalize.scss";
 @import "components/grid.scss";
 @import "components/forms/forms.scss";
-@import "components/utils.scss";
 
 /* ----------------------------
  * Layouts
@@ -26,3 +73,4 @@
  * Demo
  * ------------------------------------------------------- */
 @import "demo/grid";
+

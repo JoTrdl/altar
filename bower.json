@@ -15,6 +15,7 @@
   ],
   "dependencies": {
     "jQuery": "2.x.x",
-    "fontawesome": "latest"
+    "fontawesome": "latest",
+    "exoskeleton": "~0.7.0"
   }
 }

@@ -1,0 +1,15 @@
+
+.bold    { font-weight: $bold-font-weight }
+.regular { font-weight: normal }
+.italic  { font-style: italic }
+.caps    { text-transform: uppercase; letter-spacing: .2em; }
+
+.left-align   { text-align: left }
+.center       { text-align: center }
+.right-align  { text-align: right }
+.justify      { text-align: justify }
+
+.underline    { text-decoration: underline; }
+.line-through { text-decoration: line-through; }
+
+.nowrap { white-space: nowrap }

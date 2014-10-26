@@ -6,15 +6,6 @@
 
   $gridColumns: 12;
 
-  $screen-small-min: "320px";
-  $screen-medium-min: "480px";
-  $screen-large-min: "920px";
-
-  $screen-small-mq: "(min-width: #{$screen-small-min}) and (max-width : #{$screen-medium-min})";
-  $screen-medium-mq: "(min-width: #{$screen-medium-min}) and (max-width : #{$screen-large-min})";
-  $screen-large-mq: "(min-width: #{$screen-large-min})";
-
-
   position: relative;
   width: 100%;
 
@@ -65,7 +56,7 @@
   /*
    * Special classes for medium : md-spanX md-offsetX 
    */
-  @media #{$screen-medium-mq} {
+  @media #{$breakpoint-md} {
     // Create spanX classes
     @for $i from 1 through $gridColumns {
       .md-span#{$i} {
@@ -81,16 +72,5 @@
     }
     .md-offset0 { margin-left: 0; } // Special case for 0
   }
-
-
-  // Image in row are contained in the grid
-  img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-  }
-
-  &.animate > [class^="span"] {
-    transition: width 0.2s ease;
-  }
+  
 }

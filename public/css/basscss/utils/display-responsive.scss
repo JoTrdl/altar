@@ -1,0 +1,29 @@
+
+.sm-show, .md-show, .lg-show {
+  display: none;
+}
+
+@media #{$breakpoint-sm} {
+  .sm-show { display: block }
+}
+
+@media #{$breakpoint-md} {
+  .md-show { display: block }
+}
+
+@media #{$breakpoint-lg} {
+  .lg-show { display: block }
+}
+
+
+@media #{$breakpoint-sm} {
+  .sm-hide { display: none }
+}
+
+@media #{$breakpoint-md} {
+  .md-hide { display: none }
+}
+
+@media #{$breakpoint-lg} {
+  .lg-hide { display: none }
+}

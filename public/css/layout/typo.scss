@@ -1,13 +1,3 @@
-/* ----------------------------
- * Variables
- * ------------------------------------------------------- */
-$body-font-style: normal;
-$body-font-variant: normal;
-$body-font-weight: 300;
-$body-font-size: 18px;
-$body-line-height: 175%;
-$body-font-family: "Helvetica Neue", Helvetica, arial, sans-serif;
-$body-color: #111;
 
 /* ----------------------------------------
  * Body
@@ -23,10 +13,8 @@ body {
  * Paragraphs
  * ------------------------------------------------------------------- */
 p {
-  font-size: 1em;
-  line-height: 1.75em;
-  margin: 12px 0;
-
+  
+  
   &.lead {
     font-size: 1.5em;
     line-height: 1.5em;
@@ -34,29 +22,13 @@ p {
   }
 }
 
-/* ----------------------------------------
- * Headings
- * ------------------------------------------------------------------- */
-h1,h2,h3,h4,h5,h6 {
-  font-family: "Lucida Grande", "Helvetica Neue", Helvetica, arial, sans-serif;
-  font-weight: 400;
-  line-height: 1em;
-  margin:  1em 0;
-  letter-spacing: -1px;
-}
 
-h1 { font-size: 2.25em; }
-h2 { font-size: 2em; }
-h3 { font-size: 1.75em; }
-h4 { font-size: 1.5em; }
-h5 { font-size: 1.25em; }
-h6 { font-size: 1em; }
 
 /* ----------------------------------------
  * Pre
  * ------------------------------------------------------------------- */
 pre {
-  font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
+  font-family: $monospace-font-family;
   background: rgba(128, 128, 128, 0.15);
   padding: 5px 10px;
   .nt {

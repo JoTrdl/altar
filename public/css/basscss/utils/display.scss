@@ -1,0 +1,29 @@
+
+.inline       { display: inline }
+.block        { display: block }
+.inline-block { display: inline-block }
+.display-none { display: none }
+
+.overflow-hidden { overflow: hidden }
+.overflow-hidden-x { overflow-x: hidden }
+.overflow-hidden-y { overflow-y: hidden }
+
+.overflow-scroll { overflow: scroll; -webkit-overflow-scrolling: touch; }
+.overflow-scroll-x { overflow-x: scroll; -webkit-overflow-scrolling: touch; }
+.overflow-scroll-y { overflow-y: scroll; -webkit-overflow-scrolling: touch; }
+
+.hard-acc { transform: translate3d(0,0,0); }
+
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  display: table
+}
+.clearfix:after { clear: both }
+
+.left  { float: left }
+.right { float: right }
+
+.fit { max-width: 100% }
+.half-width { width: 50% }
+.full-width { width: 100% }

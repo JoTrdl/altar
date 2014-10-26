@@ -1,17 +1,19 @@
-div.header(data-threshold-small=145)
+div.header(data-threshold-small=145, data-view="Header")
   div.wrapper
     h1.title #{title}
     h2.subtitle [Full Stack App Template]
 
 script.
-  $(function() {
-    var $header = $('.header');
-    var threhold = $header.data('threshold-small') || 1;
-    var $doc = $(document);
+  /*
+    $(function() {
+      var $header = $('.header');
+      var threhold = $header.data('threshold-small') || 1;
+      var $doc = $(document);
 
-    $doc.scroll(function() {
-      var top = $doc.scrollTop();
-      if (top >= threhold) $header.addClass('small');
-      else if (top <= 1) $header.removeClass('small');
+      $doc.scroll(function() {
+        var top = $doc.scrollTop();
+        if (top >= threhold) $header.addClass('small');
+        else if (top <= 1) $header.removeClass('small');
+      });
     });
-  });
+  */
