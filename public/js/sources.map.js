@@ -27,13 +27,13 @@
     '/vendor/exoskeleton/exoskeleton.js',
 
     // App stuffs
-    '/js/app.namespace.js',
-    '/js/app.helpers.js',
+    '/js/app/app.namespace.js',
+    '/js/app/app.helpers.js',
     
-    '/js/views/app.header.view.js',
+    '/js/app/views/app.header.view.js',
 
-    '/js/app.router.js',
-    '/js/app.startup.js'
+    '/js/app/app.router.js',
+    '/js/app/app.startup.js'
 
   ];
 
