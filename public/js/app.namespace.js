@@ -3,11 +3,21 @@
  * @type {Object} Application namespace.
  */
 var app = {
-	views: {},
-	models: {},
-	collections: {},
-	utils: {},
-	
-	data: {},
-	aliveViews: {}
+  
+  // App classes definition 
+  classes: {
+    views: {},
+    models: {},
+    collections: {},
+    Router: null
+  },
+
+  // Helper functions
+  helpers: {},
+
+  // Instances
+  views: {},
+  models: {},
+  collections: {}
+
 };

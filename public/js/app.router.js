@@ -1,4 +1,4 @@
-app.Router = Backbone.Router.extend({
+app.classes.Router = Backbone.Router.extend({
 
   routes: {
     "*all": "all",

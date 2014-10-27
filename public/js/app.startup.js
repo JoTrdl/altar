@@ -2,13 +2,13 @@
 /**
  * Application entry point.
  * Create a new router, load DOM views.
- * Then start history.
+ * Then start Bakbone history.
  */
-$('document').ready(function() {
+app.startup = function() {
 
-  app.router = new app.Router();
+  app.router = new app.classes.Router();
   
-  app.utils.loadViews($(document));
+  app.helpers.loadViews($(document));
 
   Backbone.history.start();
-});
+};

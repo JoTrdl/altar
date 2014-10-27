@@ -3,16 +3,16 @@
  * Load all views in the passed container.
  * @param  {jQuery Object} $cont The jQuery element object
  */
-app.utils.loadViews = function($cont) {
+app.helpers.loadViews = function($cont) {
   $cont.find("[data-view]").each(function() {
     var $el      = $(this),
         view     = $el.data("view"),
-        thisView = app.views[view];
-        
+        thisView = app.classes.views[view];
+
     if (thisView) {
       var v = new thisView({el: this});
       $el.data('cid', v.cid);
-      app.aliveViews[v.cid] = v;
+      app.views[v.cid] = v;
     }
 
   });
@@ -22,15 +22,23 @@ app.utils.loadViews = function($cont) {
  * Destroy all views in the passed container.
  * @param  {jQuery Object} $cont The jQuery element object
  */
-app.utils.destroyViews = function($cont) {
+app.helpers.destroyViews = function($cont) {
   $cont.find("[data-view]").each(function() {
     var $el  = $(this),
         cid  = $el.data('cid'),
-        view = app.aliveViews[cid];
+        view = app.views[cid];
 
     if (view) {
       view.destroy && view.destroy();
-      delete app.aliveViews[cid];
+      delete app.views[cid];
     }
   });
 };
+
+/**
+ * Set true/false if touch device or not. 
+ * Inline function executed once.
+ */
+app.helpers.isTouch = (function() {
+  return !!('ontouchstart' in window);
+})();
