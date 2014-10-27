@@ -23,10 +23,25 @@ h6, .h6 { font-size: 1em; }
 /* ----------------------------------------
  * List
  * ------------------------------------------------------------------- */
-.list-reset {
+ul.reset, ol.reset {
   list-style: none;
   padding-left: 0;
 }
+
+
+/* ----------------------------------------
+ * Quote
+ * ------------------------------------------------------------------- */
+blockquote {
+  margin-top: $space-3;
+  margin-bottom: $space-3;
+  margin-left: 0;
+  padding-left: $space-2;
+  padding-right: $space-2;
+
+  font-style: italic;
+}
+
 
 /* ----------------------------------------
  * Images

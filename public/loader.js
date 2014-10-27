@@ -125,8 +125,9 @@
         return;
       }
       // Quota error. Need to clean up cache.
-      // TODO
+      
       var currentVersion = key.split('|')[1];
+      
       for (item in localStorage) {
         if (item.indexOf(storagePrefix) === 0 ) {
           var version = item.split('|')[1];
