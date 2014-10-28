@@ -1,7 +1,8 @@
 module.exports = {
   dev: {
     options: {
-      outputStyle: 'compressed',
+      outputStyle: 'nested',
+      sourceComments: 'none',
       sourceMap: true
     },
     files: {
@@ -10,7 +11,8 @@ module.exports = {
   },
   release: {
     options: {
-      outputStyle: 'compressed',
+      outputStyle: 'nested', // A bug or something break the grid in "compressed" mode... So will use mincss after...
+      sourceComments: 'none',
       sourceMap: false
     },
     files: {

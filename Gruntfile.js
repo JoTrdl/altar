@@ -34,7 +34,7 @@ module.exports = function(grunt) {
   grunt.registerTask("watchall", ["concurrent:watch"]);
 
   grunt.registerTask("release", [
-  	"sass:release", "autoprefixer", "analyzecss", "concat", // CSS
+  	"sass:release", "autoprefixer", "analyzecss", "cssmin", // CSS
   	"jshint", "uglify" // JS
   ]);
 

@@ -47,7 +47,7 @@
     "grunt-contrib-analyze-css": "latest",
     "grunt-contrib-jshint": "latest",
     "grunt-contrib-uglify": "latest",
-    "grunt-contrib-concat": "latest",
+    "grunt-contrib-cssmin": "latest",
     "load-grunt-config": "latest",
     "time-grunt": "latest"
   },
