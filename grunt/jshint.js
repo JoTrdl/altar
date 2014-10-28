@@ -7,4 +7,4 @@ module.exports = {
     expr: true,
     loopfunc: true
   }
-};  
+};
