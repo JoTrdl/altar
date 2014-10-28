@@ -1,14 +1,20 @@
-var fs = require('fs');
+var fs = require('fs'),
+    path = require('path');
 
 // Node serves static files in dev
 app.use( express.static(app.settings.static) );
 
-var sourcesMap = JSON.parse(fs.readFileSync(ROOT + '/public/js/sources.map.json'));
+// Load the sources map file
+var sourcesMapFile = path.resolve(ROOT, 'public/js/sources.map.json');
+var sourcesMap = [];
+try { sourcesMap = JSON.parse(fs.readFileSync(sourcesMapFile)); } catch(e) {}
 
-// Pretty HTML in dev
 app.use(function(req, res, next) {
+  // Pretty HTML in dev
   app.locals.pretty = true;
 
+  // Set the sources mar in views
   app.locals.sources = sourcesMap;
+
   next();
 });

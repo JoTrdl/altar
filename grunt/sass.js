@@ -1,7 +1,7 @@
 module.exports = {
   dev: {
     options: {
-      outputStyle: 'nexted',
+      outputStyle: 'compressed',
       sourceMap: true
     },
     files: {

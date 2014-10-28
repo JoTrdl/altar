@@ -5,8 +5,8 @@ module.exports = function(grunt) {
 
   // Load the sources map file and update path.
   var sourcesMap = grunt.file.readJSON('public/js/sources.map.json');
-  for (i in sourcesMap.css) { sourcesMap.css[i] = PUBLIC_ROOT + sourcesMap.css[i]; }
-  for (i in sourcesMap.scripts) { sourcesMap.scripts[i] = PUBLIC_ROOT + sourcesMap.scripts[i]; }
+  for (var i in sourcesMap.css) { sourcesMap.css[i] = PUBLIC_ROOT + sourcesMap.css[i]; }
+  for (var i in sourcesMap.scripts) { sourcesMap.scripts[i] = PUBLIC_ROOT + sourcesMap.scripts[i]; }
 
   // measures the time each task takes
   require('time-grunt')(grunt);

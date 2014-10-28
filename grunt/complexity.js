@@ -1,5 +1,5 @@
 module.exports = {
-  src: ["app/*.js", "app/**/*.js", "lib/*.js", "lib/**/*.js", "config/*.js", "config/**/*.js"],
+  src: ["app/**/*.js", "public/js/**/*.js"],
   options: {
     breakOnErrors: false,
     errorsOnly: false,               // show only maintainability errors
