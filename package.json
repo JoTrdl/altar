@@ -35,7 +35,7 @@
     "passport": "0.x.x",
     "passport-local": "1.x.x",
     "bunyan": "0.x.x",
-    "bunyan-prettystream": "0.x.x"
+    "bunyan-prettystream": "0.x.x"  
   },
   "devDependencies": {
     "grunt": "latest",
@@ -45,6 +45,8 @@
     "grunt-sass": "latest",
     "grunt-autoprefixer": "latest",
     "grunt-contrib-analyze-css": "latest",
+    "grunt-contrib-jshint": "latest",
+    "grunt-contrib-uglify": "latest",
     "load-grunt-config": "latest",
     "time-grunt": "latest"
   },

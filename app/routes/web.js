@@ -17,7 +17,7 @@ app.get('/admin', loginRequired(true), controllers.web.adminController.doGet);
 
 // testing error 500
 app.get('/error', function() {
-  throw new Error('test')
+  throw new Error('test');
 });
 
 /*
@@ -37,4 +37,4 @@ function loginRequired(require) {
     //req.flash('error', 'You need to log in to access to this page.');
     return res.redirect('/login');
   };
-};
+}

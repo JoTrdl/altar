@@ -71,7 +71,7 @@
           // OK, got it
           next(i, data, type);
           return;
-        };
+        }
 
         fetch(url, function(e, content) {
           // Save to the cache
@@ -128,7 +128,7 @@
       
       var currentVersion = key.split('|')[1];
       
-      for (item in localStorage) {
+      for (var item in localStorage) {
         if (item.indexOf(storagePrefix) === 0 ) {
           var version = item.split('|')[1];
           if (version != currentVersion) {
@@ -162,6 +162,6 @@
         }
       }
     }
-
-  }
+    
+  };
 })(this, document);

@@ -1,9 +1,8 @@
 module.exports = {
   dev: {
     options: {
-      style: 'expanded',
-      sourcemap: true,
-      debugInfo: false
+      outputStyle: 'nexted',
+      sourceMap: true
     },
     files: {
       'public/css/app.css': 'public/css/app.scss'
@@ -11,9 +10,8 @@ module.exports = {
   },
   dist: {
     options: {
-      style: 'compressed',
-      sourcemap: false,
-      debugInfo: false
+      outputStyle: 'compressed',
+      sourceMap: false
     },
     files: {
       'public/css/app.css': 'public/css/app.scss'

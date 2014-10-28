@@ -1,5 +1,5 @@
-var passport = require('passport')
-  , LocalStrategy = require('passport-local').Strategy;
+var passport = require('passport'), 
+    LocalStrategy = require('passport-local').Strategy;
 
 var fakeUser = {
   'login': 'admin'

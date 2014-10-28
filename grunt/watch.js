@@ -9,7 +9,7 @@ module.exports = {
 
   complexity: {
     files: ["app/*.js","app/**/*.js"],
-    tasks: ["complexity:dev"],
+    tasks: ["jshint", "complexity"],
     options: {
 
     }

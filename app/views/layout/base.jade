@@ -15,7 +15,9 @@ html(lang="en")
     
     link(rel="stylesheet", href="http://fonts.googleapis.com/css?family=Lato:400,300,700", type="text/css")
 
-    script(src="/js/sources.map.js")
+    script.
+      var sources = !{JSON.stringify(sources)};
+
     script(src="/js/loader.js")
 
     //- If dev env, add script to autoreload page when scss change
