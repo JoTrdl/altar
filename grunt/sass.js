@@ -8,7 +8,7 @@ module.exports = {
       'public/css/app.css': 'public/css/app.scss'
     }
   },
-  dist: {
+  release: {
     options: {
       outputStyle: 'compressed',
       sourceMap: false

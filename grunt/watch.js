@@ -7,8 +7,8 @@ module.exports = {
     }
   },
 
-  complexity: {
-    files: ["app/*.js","app/**/*.js"],
+  js: {
+    files: ["app/**/*.js","public/js/**/*.js"],
     tasks: ["jshint", "complexity"],
     options: {
 
