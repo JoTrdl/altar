@@ -3,9 +3,9 @@
 # http://viget.com/extend/how-to-use-docker-on-os-x-the-missing-guide
 # options :ro
 ###############################################################
-# docker build -t stack/altar .
-# docker run --name altar -d stack/altar
-# docker run -p 8080:8080 -d stack/altar -v .:/bundle
+# docker build -t altar/stack .
+# docker run --name altar -d altar/stack
+# docker run -p 8080:8080 -d -v .:/bundle altar/stack
 
 ####################
 # Clear containers
@@ -26,20 +26,25 @@ RUN     rpm -Uvh http://fedora-epel.mirror.iweb.com/7/x86_64/e/epel-release-7-2.
 RUN     yum install -y nodejs
 RUN     yum install -y npm
 
+# Install nodemon
+RUN     npm install -g nodemon
+
 # Install Redis
 RUN     yum install -y redis
 
 # Bundle app source
-COPY     . /bundle
+#COPY     . /bundle
 # Install app dependencies
-RUN     cd /bundle; npm install -d
+#RUN     cd /bundle; npm install -d
+
+RUN   mkdir /bundle; cd /bundle
 
 EXPOSE  8080
 
 # Prepare commands
-RUN      echo "service redis-server start" && echo "Redis started" > /etc/bash.bashrc
-RUN      echo "node /bundle/app/app.js" && echo "App started" >> /etc/bash.bashrc
-ENTRYPOINT ["/bin/bash"]
+#RUN      echo "service redis-server start" && echo "Redis started" > /etc/bash.bashrc
+#RUN      echo "node /bundle/app/app.js" && echo "App started" >> /etc/bash.bashrc
+#ENTRYPOINT ["/bin/bash"]
 
-#CMD ["node", "/bundle/app/app.js"]
+CMD ["nodemon", "/bundle/app/app.js"]
 
