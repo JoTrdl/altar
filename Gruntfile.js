@@ -30,13 +30,36 @@ module.exports = function(grunt) {
     },
   });
 
-  grunt.registerTask("buildcss", ["sass:dev", "autoprefixer", "analyzecss"]);
-  grunt.registerTask("watchall", ["concurrent:watch"]);
+  grunt.registerTask("buildcss", "Build & analyze the CSS for Dev", function() {
+    grunt.log.writeln("+------------------------------------------------+");
+    grunt.log.writeln("| Building CSS for Development                   |");
+    grunt.log.writeln("+------------------------------------------------+");
 
-  grunt.registerTask("release", [
-  	"sass:release", "autoprefixer", "analyzecss", "cssmin", // CSS
-  	"jshint", "uglify" // JS
-  ]);
+    grunt.task.run(["sass:dev", "autoprefixer", "analyzecss"]);
+  });
+
+  
+  grunt.registerTask("watchall", "Watch CSS/JS for changes", function() {
+    grunt.log.writeln("+------------------------------------------------+");
+    grunt.log.writeln("| Watching CSS/JS for changes                    |");
+    grunt.log.writeln("+------------------------------------------------+");
+    
+    grunt.task.run(["concurrent:watch"]);
+  });
+
+
+  grunt.registerTask("release", "Relase for Production", function() {
+    grunt.log.writeln("+------------------------------------------------+");
+    grunt.log.writeln("| Preparing release for Production               |");
+    grunt.log.writeln("+------------------------------------------------+");
+
+    grunt.task.run([
+      "sass:release", "autoprefixer", "analyzecss", "cssmin", // CSS
+      "jshint", "uglify" // JS
+    ]);
+  });
+
 
   grunt.registerTask("default", ["buildcss", "watchall"]);
+
 };
