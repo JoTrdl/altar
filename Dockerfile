@@ -1,9 +1,11 @@
 ####################
 # Docker installation
+# http://viget.com/extend/how-to-use-docker-on-os-x-the-missing-guide
+# options :ro
 ###############################################################
 # docker build -t stack/altar .
 # docker run --name altar -d stack/altar
-# docker run -p 8080:8080 -d stack/altar
+# docker run -p 8080:8080 -d stack/altar -v .:/bundle
 
 ####################
 # Clear containers
