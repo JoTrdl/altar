@@ -33,11 +33,15 @@ app.classes.Router = Backbone.Router.extend({
     $.ajax({
       url: url,
       dataType: "html",
-    }).done(function(data, status, xhr) {
-      self.$content.html(data);
-
-    }).fail(function(xhr, status) {
-      alert( "error" );
+    })
+    .done(function(data, status, xhr) {
+      // Clear current view, update DOM, load associated views.
+      app.helpers.destroyViews(self.$content);
+      self.$content.empty().html(data);
+      app.helpers.loadViews(self.$content);
+    })
+    .fail(function(xhr, status) {
+      alert( "TODO: error fetch" );
     });
   }
 
