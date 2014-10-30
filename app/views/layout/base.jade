@@ -1,45 +1,48 @@
-doctype html
-html(lang="en")
-  head
-    block meta
-      meta(http-equiv='Content-Type', content='text/html; charset=UTF-8')
-      meta(name='viewport', content='width=device-width, user-scalable=no')
+if xhrPartial
+  block content
+else
+  doctype html
+  html(lang="en")
+    head
+      block meta
+        meta(http-equiv='Content-Type', content='text/html; charset=UTF-8')
+        meta(name='viewport', content='width=device-width, user-scalable=no')
 
-    block head
-      title= (typeof(title) == 'undefined' ? "App" : title)
+      block head
+        title= (typeof(title) == 'undefined' ? "App" : title)
 
-    link(rel="stylesheet", href="/css/app.css", type="text/css")
-    link(rel="stylesheet", href="/vendor/fontawesome/css/font-awesome.min.css", type="text/css")
+      link(rel="stylesheet", href="/css/app.css", type="text/css")
+      link(rel="stylesheet", href="/vendor/fontawesome/css/font-awesome.min.css", type="text/css")
 
-    block css
-    
-    link(rel="stylesheet", href="http://fonts.googleapis.com/css?family=Lato:400,300,700", type="text/css")
+      block css
+      
+      link(rel="stylesheet", href="http://fonts.googleapis.com/css?family=Lato:400,300,700", type="text/css")
 
-    script.
-      var sources = !{JSON.stringify(sources)};
-
-    script(src="/js/loader.js")
-
-    //- If dev env, add script to autoreload page when scss change
-    if environment == 'development'
-      script(src="//localhost:35729/livereload.js")
       script.
-        loader.clear();
+        var sources = !{JSON.stringify(sources)};
 
-    script.
-      loader.require(sources.scripts, 'js', '1', function() {
-        app.startup();
-      });
-      
+      script(src="/js/loader.js")
 
-    block scripts
-      
-  body
-    block header
-      include header 
+      //- If dev env, add script to autoreload page when scss change
+      if environment == 'development'
+        script(src="//localhost:35729/livereload.js")
+        script.
+          loader.clear();
 
-    div.content
-      block content
+      script.
+        loader.require(sources.scripts, 'js', '1', function() {
+          app.startup();
+        });
+        
 
-    block footer
-      include footer
+      block scripts
+        
+    body
+      block header
+        include header 
+
+      div.content
+        block content
+
+      block footer
+        include footer

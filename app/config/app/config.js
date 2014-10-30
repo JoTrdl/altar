@@ -67,6 +67,8 @@ app.use(function(req, res, next) {
   res.locals.url = req.url;
   res.locals.user = req.user;
   res.locals.csrftoken = req.csrfToken();
+
+  app.locals.xhrPartial = (req.get('X-Requested-With') == 'XMLHttpRequest');
   next();
 });
 

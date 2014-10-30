@@ -6,6 +6,8 @@ app.classes.Router = Backbone.Router.extend({
 
   initialize: function() {
     
+    this.$content = $('.content');
+
     $(document).on("click", "a[href]:not([data-bypass])", function(e) {
       // If new tab or new window requested... abort.
       if (e.metaKey || e.ctrlKey)
@@ -23,16 +25,18 @@ app.classes.Router = Backbone.Router.extend({
   },
 
   all: function() {
-  	var url = "/" + Backbone.history.getFragment();
-  	console.log('Route change: [' + url + ']');
+    var self = this;
+    var url = "/" + Backbone.history.getFragment();
+    console.log('Route change: [' + url + ']');
 
     // Fetch the content from server
     $.ajax({
       url: url,
+      dataType: "html",
     }).done(function(data, status, xhr) {
-      
-    })
-    .fail(function(xhr, status) {
+      self.$content.html(data);
+
+    }).fail(function(xhr, status) {
       alert( "error" );
     });
   }
