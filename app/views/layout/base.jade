@@ -9,15 +9,12 @@ if !xhrPartial
       block head
         title= (typeof(title) == 'undefined' ? "App" : title)
 
-      link(rel="stylesheet", href="/css/app.css", type="text/css")
-      link(rel="stylesheet", href="/vendor/fontawesome/css/font-awesome.min.css", type="text/css")
-
+      //- Stylesheets
+      include ./include/stylesheets
       block css
       
-      link(rel="stylesheet", href="http://fonts.googleapis.com/css?family=Lato:400,300,700", type="text/css")
-
       //- Scripts stuffs
-      include ./scripts
+      include ./include/scripts
       block scripts
         
     body

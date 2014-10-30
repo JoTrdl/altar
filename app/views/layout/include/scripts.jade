@@ -1,14 +1,14 @@
 
-script(src="/js/loader.js")
-
 //- Development scripts
 if environment == 'development'
   script(src="//localhost:35729/livereload.js")
+  script(src="/js/loader.js")
   script.
     var sources = !{JSON.stringify(sources)};
     loader.clear();
     loader.require(sources.scripts, 'js', '1', function() { app.startup(); });
 else
   //- Production specific
+  script(src="/js/loader.min.js")
   script.
     loader.require("app.min.js", 'js', '1', function() { app.startup(); });
