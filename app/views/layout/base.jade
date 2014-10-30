@@ -1,6 +1,4 @@
-if xhrPartial
-  block content
-else
+if !xhrPartial
   doctype html
   html(lang="en")
     head
@@ -18,23 +16,8 @@ else
       
       link(rel="stylesheet", href="http://fonts.googleapis.com/css?family=Lato:400,300,700", type="text/css")
 
-      script.
-        var sources = !{JSON.stringify(sources)};
-
-      script(src="/js/loader.js")
-
-      //- If dev env, add script to autoreload page when scss change
-      if environment == 'development'
-        script(src="//localhost:35729/livereload.js")
-        script.
-          loader.clear();
-
-      script.
-        loader.require(sources.scripts, 'js', '1', function() {
-          app.startup();
-        });
-        
-
+      //- Scripts stuffs
+      include ./scripts
       block scripts
         
     body
@@ -46,3 +29,6 @@ else
 
       block footer
         include footer
+else
+  //- Partial content requested by XHR
+  block content

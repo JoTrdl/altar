@@ -41,6 +41,7 @@ app.classes.Router = Backbone.Router.extend({
       app.helpers.loadViews(self.$content);
     })
     .fail(function(xhr, status) {
+      console.log(status);
       alert( "TODO: error fetch" );
     });
   }
