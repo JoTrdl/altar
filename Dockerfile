@@ -16,40 +16,16 @@
 
 # http://stackoverflow.com/questions/18805073/docker-multiple-entrypoints
 
-# DOCKER-VERSION 1.3.0
-FROM    centos:latest
+FROM    debian:latest
 
-# Enable EPEL
-#RUN     rpm -Uvh http://fedora-epel.mirror.iweb.com/7/x86_64/e/epel-release-7-2.noarch.rpm
-
-# Install Node.js and npm
-RUN     yum install -y wget tar > /dev/null
+RUN     apt-get update; apt-get install -y wget tar
 RUN     wget http://nodejs.org/dist/v0.10.33/node-v0.10.33-linux-x64.tar.gz > /dev/null
 RUN     tar --strip-components 1 -xzf node-v* -C /usr/local > /dev/null
 RUN     node --version
 
-
-#RUN     yum install -y npm
-
-# Install nodemon
-#RUN     npm install -g nodemon
-
-# Install Redis
-#RUN     yum install -y redis
-
-# Bundle app source
-#COPY     . /bundle
-# Install app dependencies
-#RUN     cd /bundle; npm install -d
-
-RUN   mkdir /bundle; cd /bundle
+RUN     mkdir /bundle; cd /bundle
 
 EXPOSE  8080
 
-# Prepare commands
-#RUN      echo "service redis-server start" && echo "Redis started" > /etc/bash.bashrc
-#RUN      echo "node /bundle/app/app.js" && echo "App started" >> /etc/bash.bashrc
-#ENTRYPOINT ["/bin/bash"]
-
-CMD ["node", "/bundle/app/app.js"]
+CMD     ["node", "/bundle/app/app.js"]
 
