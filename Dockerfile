@@ -20,10 +20,12 @@ FROM    debian:latest
 
 # Install node, redis, nginx
 RUN     export DEBIAN_FRONTEND=noninteractive && \
-        apt-get update > /dev/null; apt-get install -y wget tar daemontools nginx > /dev/null && \
-        wget -q http://nodejs.org/dist/v0.10.33/node-v0.10.33-linux-x64.tar.gz > /dev/null && \
-        tar --strip-components 1 -xzf node-v* -C /usr/local > /dev/null && \
-        apt-get clean > /dev/null; apt-get autoremove > /dev/null && \
+        apt-get update; apt-get upgrade && \
+        apt-get install -y wget daemontools nginx redis-server && \
+        wget -q http://nodejs.org/dist/v0.10.33/node-v0.10.33-linux-x64.tar.gz && \
+        tar --strip-components 1 -xzf node-v* -C /usr/local && \
+        apt-get clean; apt-get autoremove && \
+        apt-get remove -y wget && \
         rm -rf node-v0.10.33-linux-x64.tar.gz /var/lib/apt/lists/* && \
         node --version && \
         mkdir /bundle; cd /bundle
