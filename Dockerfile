@@ -18,9 +18,13 @@
 
 FROM    debian:latest
 
-RUN     apt-get update; apt-get install -y wget tar > /dev/null && \
-        wget http://nodejs.org/dist/v0.10.33/node-v0.10.33-linux-x64.tar.gz > /dev/null && \
+# Install node, redis, nginx
+RUN     export DEBIAN_FRONTEND=noninteractive && \
+        apt-get update > /dev/null; apt-get install -y wget tar daemontools nginx > /dev/null && \
+        wget -q http://nodejs.org/dist/v0.10.33/node-v0.10.33-linux-x64.tar.gz > /dev/null && \
         tar --strip-components 1 -xzf node-v* -C /usr/local > /dev/null && \
+        apt-get clean > /dev/null; apt-get autoremove > /dev/null && \
+        rm -rf node-v0.10.33-linux-x64.tar.gz /var/lib/apt/lists/* && \
         node --version && \
         mkdir /bundle; cd /bundle
 
