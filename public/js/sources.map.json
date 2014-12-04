@@ -16,7 +16,9 @@
     "/js/app/views/app.header.view.js",
 
     "/js/app/app.router.js",
-    "/js/app/app.startup.js"
+    "/js/app/app.startup.js",
+
+    "/js/app.ux.js"
   ]
 }
 
