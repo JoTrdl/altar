@@ -12,14 +12,18 @@ h1,h2,h3,h4,h5,h6,
   margin:  $heading-margin;
 }
 
-// http://type-scale.com/
-
-h1, .h1 { font-size: 2.25em; }
-h2, .h2 { font-size: 2em; }
-h3, .h3 { font-size: 1.75em; }
-h4, .h4 { font-size: 1.5em; }
-h5, .h5 { font-size: 1.25em; }
-h6, .h6 { font-size: 1em; }
+/*
+  Create a type scale for headers h1 to h6
+  Sample options:
+    - Minor Second (1.067)
+    - Major Second (1.125)
+    - Minor Third (1.200)
+    - Major Third (1.250)
+    - Agumented Fourth (1.414) -- Default
+    - Perfect Fifth (1.500)
+    - Golden Ratio (1.618)
+ */
+@include set-type-scale(1.414);
 
 /* ----------------------------------------
  * List
