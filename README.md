@@ -3,35 +3,7 @@ Altar
 
 A Full Stack App Template.
 
-This readme file is not up to date.
-
-
-Folder structure
-----
-```
-|-- app
-|   |-- controllers
-|       |-- web
-|       |-- rest
-|       |-- websocket
-|   |-- helpers
-|   |-- models
-|   |-- routes
-|   |-- views
-|-- config
-|-- public
-|   |-- css
-|   |-- img
-|   |-- js
-|-- lib
-|-- test
-```
-
-NPM modules
-----
-* [Express 4.x.x](http://expressjs.com/)
-* [Socket.io 1.x.x](http://socket.io/)
-
+Currently in development.
 
 License
 ----
